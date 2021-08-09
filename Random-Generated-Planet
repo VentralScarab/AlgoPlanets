@@ -3,7 +3,7 @@ SolidGas = ["Solid","Gas","Ice Giant"]
 OddsSolidGas = [5,3,2] #Chance Terrastrial: 50%, Gas: 30%, Ice Gas Planet: 20%
 SolidPlanets = ["Blue Planet", "Green Planet", "Brown Planet", "Iron Planet", "Red Planet", "Yellow Planet"] #Chance 1/6
 GasPlanets = ["Purple Planet", "Brown Planet", "Blue/Turquoise Planet", "Red Planet", "Yellow  Planet"] #Chance 1/5
-IceGiant = ["Dark Blue Planet", Light Blue Planet"]
+IceGiant = ["Dark Blue Planet", "Light Blue Planet"]
 Water = ["Ocean&Islands", "River","Frozen Oceans", "Frozen Rivers", "Normal"] 
 OddsWater = [3,5,2,4,8] #Chance Ocean: 13,63%, River: 22,72%, Frozen Ocean: 9,09%, Frozen River: 18,18%, No Water: 36,36%
 Clouds = ["Small Clouds","Big Clouds", "No Clouds"]
@@ -54,8 +54,8 @@ if SolidGasDecide == ["Solid"]:
         print (random.choices(Crater, OddsCrater, k=1))
         print (CheckMoons)
         print (CheckVolcano)
-        if CheckVolacno == ["No Volcano"]:
-            print (random.coices(Lava, OddsLava, k=1))
+        if CheckVolcano == ["No Volcano"]:
+            print (random.choices(Lava, OddsLava, k=1))
 
 #Gas
 if SolidGasDecide == ["Gas"]:
