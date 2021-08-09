@@ -1,0 +1,87 @@
+Chance of each Attribute
+
+Terrastrial Planet: 		50%
+Gas Planet: 			30%
+Ice Giant (Gas):		20%
+
+Terrestrial Kind (Condition Terrestrial Planet: 50%)
+
+Blue Planet (Terra.)		8,33% (Implement no water for this Planet)
+Green Planet (Terra.)		8,33%
+Brown Planet (Terra.)		8,33%
+Iron Planet (Terra.)		8,33%
+Red Planet (Terra.)		8,33%
+Yellow Planet (Terra.)		8,33%
+
+Gas Condition (Condition Gas Planet: 30%)
+
+Purple Planet (Gas)		6%
+Brown Planet (Gas)		6%
+Blue/Torqouise (Gas)		6% (Maybe delete this one?)
+Red Planet (Gas)		6%
+Yellow Planet (Gas)		6%
+
+Ice Giant (Condition Ice Giant Planet: 20%)
+
+Dark Blue Planet (Ice Giant)	10%
+Light Blue Planet (Ice Giant)	10%
+
+Water (Condition Terrestrial Planet: 50%)
+
+Ocean & Islands (Terra.)	6,82%
+Rivers (Terra.)			11,36%
+Frozen Oceans (Terra.)		4,55%
+Frozen RIvers (Terra.)		9,09%
+No Water (Terra.)		18,18%
+
+Clouds on Terrestrial Planet (Condition Terrestrial Planet: 50%)
+
+Small Clouds (Terra.)		15%
+Big Clouds (Terra.)		5%
+No Clouds (Terra.)		30%
+
+Clouds on Gas Planet (Condition Gas Planet: 50%)
+
+White Clouds (Gas/Ice Giant)	10%
+Orange Clouds (Gas/Ice Giant)	7,5%
+White Sttorm (Gas/Ice Giant)	5%
+Orange Storm (Gas/Ice Giant)	2,5%
+No Clouds (Gas/Ice Giant)	25%
+
+Moons (No pre-condition needed)
+
+One Moon Brown			6,25%
+One Moon Iron			6,25%
+One Moon Red			6,25%
+One Moon Green			6,25%
+One Moon Yellow			6,25%		
+One Moon Blue			6,25%
+Two Moons Brown 		3,75%
+Two Moons Iron			3,75%
+Two Moons Red			3,75%
+Two Moons Green			3,75%
+Two Moons Yellow		3,75%
+Two Moons Blue			3,75%
+Two Moons Yellow&Green		1,25%
+Two Moons Blue&Green		1,25%
+Two Moons Red&GRey		1,25%
+Two Moons Brown&Green		1,25%
+Two Moons Green&Red		1,25%
+Two Moons Yellow&Blue		1,25%
+No Moons			32,5%
+
+Rings (Condition Gas Planet: 50%; Condition No Moons: 32,5%) [Need to adjust code for each exact condition in regards to Moon + Ring Constellation] 
+
+One Ring Brown (Gas)		1,14%
+One Ring Grey (Gas) 		1,14%
+One Ring Green (Gas)		1,14%
+One Ring Vertical Brown (Gas)	0,89%
+One Ring Vertical Grey (Gas)	0,89%
+One Ring Vertical Green (Gas)	0,89%
+Two Rings Brown (Gas)
+
+Crater (Condition Terrastrial Planet + No Water: 18,18%) [Need to adjust code for condition of No craters if Ocean, Small Craters possible if Rivers but not Big Crater]
+
+Lava (Condition Terrastrial Planet + No Water + No Big Crater) [Need to adjust code]
+
+Volcano (Condition Terrastrial Plante + No Water + No Big Crater + No Lava) [Need to adjust code]								
