@@ -29,6 +29,8 @@ print(SolidGasDecide)
 CheckWater = random.choices(Water, OddsWater, k=1)
 CheckMoons = random.choices(Moons, OddsMoons, k=1)
 CheckVolcano = random.choices(Volcano, OddsVolcano, k=1)
+CheckCrater = random.choices(Crater, OddsCrater, k=1)
+CheckLava = random.choices(Lava, OddsLava, k=1)
 
 if SolidGasDecide == ["Solid"]:
     print (random.choices(SolidPlanets))
@@ -51,11 +53,12 @@ if SolidGasDecide == ["Solid"]:
         
     else:
         print (random.choices(Clouds, OddsClouds, k=1))
-        print (random.choices(Crater, OddsCrater, k=1))
+        print (CheckCrater)
         print (CheckMoons)
-        print (CheckVolcano)
-        if CheckVolcano == ["No Volcano"]:
-            print (random.choices(Lava, OddsLava, k=1))
+        if CheckCrater == ["No Crater"]
+            print (CheckLava)
+            if CheckLava == ["No Lava"]:
+                print (CheckVolcano)
 
 #Gas
 if SolidGasDecide == ["Gas"]:
