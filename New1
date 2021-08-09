@@ -20,12 +20,15 @@ Crater = ["Big Crater", "Big&Small Craters","Small Craters", "No Craters"]
 OddsCrater = [5,3,10,12] #Chance Big Crater: 16,67% (3,03%), Big&Small Crater: 10% (1,8%), Small Craters: 33,33% (6,06%), No Craters: 40%
 Volcano = ["Volcano", "No Volcano"]
 OddsVolcano = [1,14] #Chance Volcano: 6,67%, No Volcano: 93,33%; Effectively: 1,21%
+Lava = ["Lava Ocean", "Lava River", "No Lava"]
+OddsLava = [2,3,38]
 
 #Terrastrial
 SolidGasDecide = random.choices(SolidGas)
 print(SolidGasDecide)
 CheckWater = random.choices(Water, OddsWater, k=1)
 CheckMoons = random.choices(Moons, OddsMoons, k=1)
+CheckVolcano = random.choices(Volcano, OddsVolcano, k=1)
 
 if SolidGasDecide == ["Solid"]:
     print (random.choices(SolidPlanets))
@@ -49,8 +52,10 @@ if SolidGasDecide == ["Solid"]:
     else:
         print (random.choices(Clouds, OddsClouds, k=1))
         print (random.choices(Crater, OddsCrater, k=1))
-        print (random.choices(Volcano, OddsVolcano, k=1))
         print (CheckMoons)
+        print (CheckVolcano)
+        if CheckVolacno == ["No Volcano"]:
+            print (random.coices(Lava, OddsLava, k=1))
 
 #Gas
 if SolidGasDecide == ["Gas"]:
