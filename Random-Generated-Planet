@@ -55,7 +55,7 @@ if SolidGasDecide == ["Solid"]:
         print (random.choices(Clouds, OddsClouds, k=1))
         print (CheckCrater)
         print (CheckMoons)
-        if CheckCrater == ["No Crater"]:
+        if CheckCrater == ["No Craters"]:
             print (CheckLava)
             if CheckLava == ["No Lava"]:
                 print (CheckVolcano)
