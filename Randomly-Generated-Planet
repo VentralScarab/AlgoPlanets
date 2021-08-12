@@ -1,4 +1,4 @@
-``` python
+```python
 import random
 SolidGas = ["Solid","Gas","Ice Giant"] 
 OddsSolidGas = [5,3,2] #Chance Terrastrial: 50%, Gas: 30%, Ice Gas Planet: 20%
