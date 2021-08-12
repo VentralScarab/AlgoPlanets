@@ -1,4 +1,3 @@
-```python
 import random
 SolidGas = ["Solid","Gas","Ice Giant"] 
 OddsSolidGas = [5,3,2] #Chance Terrastrial: 50%, Gas: 30%, Ice Gas Planet: 20%
@@ -81,5 +80,4 @@ if SolidGasDecide == ["Ice Giant"]:
         print (random.choices(Rings, OddsRings, k=1))
     else:
         print (random.choices(RingsWithMoon, OddsRingsWithMoon, k=1))
-```
 
