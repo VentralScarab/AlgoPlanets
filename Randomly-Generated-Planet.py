@@ -1,27 +1,27 @@
 import random
-SolidGas = ["Solid","Gas","Ice Giant"] 
-OddsSolidGas = [5,3,2] #Chance Terrastrial: 50%, Gas: 30%, Ice Gas Planet: 20%
-SolidPlanets = ["Blue Planet", "Green Planet", "Brown Planet", "Iron Planet", "Red Planet", "Yellow Planet"] #Chance 1/6
-GasPlanets = ["Purple Planet", "Brown Planet", "Blue/Turquoise Planet", "Red Planet", "Yellow  Planet"] #Chance 1/5
-IceGiant = ["Dark Blue Planet", "Light Blue Planet"]
-Water = ["Ocean&Islands", "River","Frozen Oceans", "Frozen Rivers", "Normal"] 
-OddsWater = [3,5,2,4,8] #Chance Ocean: 13,63%, River: 22,72%, Frozen Ocean: 9,09%, Frozen River: 18,18%, No Water: 36,36%
-Clouds = ["Small Clouds","Big Clouds", "No Clouds"]
-OddsClouds = [3,1,6] #Chance Small Clouds: 30%, Big Clouds: 10%, No Clouds: 60%
-GasPlanetClouds = ["Clouds White","Clouds Orange", "Storm White", "Storm Orange", "No Clouds"]
-OddsGasPlanetClouds = [20,15, 10, 5, 50] #Chance White Clouds: 20%, Orange Clouds: 15%, White Storm: 10%, Orange Storm: 5%, No Clouds: 50%
+SolidGas = ["Terrestrial World","Gas Giant","Ice Giant"] 
+OddsSolidGas = [5,3,2] 
+SolidPlanets = ["Blue Planet", "Green Planet", "Brown Planet", "Iron Planet", "Red Planet", "Yellow Planet", "Purple Planet"] 
+GasPlanets = ["Purple Planet", "Brown Planet", "Blue/Turquoise Planet", "Red Planet", "Yellow  Planet"] 
+IceGiant = ["Dark Blue Planet", "Light Blue Planet", "Icy White Planet"]
+Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] 
+OddsWater = [4,6,3,5,1,2,14] 
+Clouds = ["Veil Water Clouds (White)", "Stratocumulus Water Clouds (White)","Cumulus Water Clouds (White)", "Cloudless"]
+OddsClouds = [2,3,1,6] 
+GasPlanetClouds = ["Cumulus Water Clouds (White)","Cumulus Silicate Clouds (Red)","Cumulus Ammonia Clouds (Orange)", "Hurricane Clouds (White)", "Hurricane Ammonia Clouds (Orange)", "Cloudless"]
+OddsGasPlanetClouds = [20,15,12, 10, 5, 50] 
 Moons = ["One Moon Brown", "One Moon Grey/Iron", "One Moon Red", "One Moon Green", "One Moon Yellow", "One Moon Blue", "Two Moons Yellow", "Two Moons Brown", "Two Moons Blue", "Two Moons Green", "Two Moons Red","Two Moons Grey/Iron", "Two Moons Yellow&Grey", "Two Moons Blue&Green","Two Moons Red&Grey", "Two Moons Brown&Green", "Two Moons Green&Red", "Two Moons Yellow&Blue","No Moons"]
-OddsMoons = [5,5,5,5,5,5,3,3,3,3,3,3,1,1,1,1,1,1,26] #Chance One Moon: 6,25%, Two Moons: 3,75%, Two Different Moons: 1,25%, No Moons: 32,5%
+OddsMoons = [5,5,5,5,5,5,3,3,3,3,3,3,1,1,1,1,1,1,26] 
 Rings = ["One Brown Ring", "One Brown Ring Vertical","One Black/Grey Ring", "One Black/Grey Ring Vertical", "One Green Ring", "One Green Ring Vertical", "Two Brown Rings", "Two Brown Rings One Vertical", "Two Black/Grey Rings", "Two Black/Grey Rings One Vertical", "Two Green Rings", "Two Green Rings One Vertical", "Two Brown&Green Rings", "Two Brown&Green Rings One Vertical", "Two Grey & Brown Rings", "Two Grey & Brown Rings One Vertical", "Two Grey&Green Rings", "Two Grey&Green Rings One Vertical", "No Rings"]
-OddsRings = [9,7,9,7,9,7,5,3,5,3,5,3,2,1,2,1,2,1,47] #Chance One Ring: 7,03%, One Ring Vertical: 5,47%, Two Rings: 3,91%, Two Rings One Vertical: 2,34%, Two Different Rings: 1,56%, Two Different Rings One Vertical: 0,78%, No Rings: 61%]
+OddsRings = [9,7,9,7,9,7,5,3,5,3,5,3,2,1,2,1,2,1,47] 
 RingsWithMoon = ["One Brown Ring", "One Brown Ring Vertical","One Black/Grey Ring", "One Black/Grey Ring Vertical", "One Green Ring", "One Green Ring Vertical", "Two Brown Rings One Vertical", "Two Black/Grey Rings One Vertical", "Two Green Rings One Vertical", "Two Brown&Green Rings One Vertical", "Two Grey & Brown Rings One Vertical", "Two Grey&Green Rings One Vertical", "No Rings"]
-OddsRingsWithMoon = [8,6,8,6,8,6,4,4,4,2,2,2,10] #Chance One Ring: 10% (With One Moon: 1,25%, With Two Moons: 0,75%), Chance One Ring: 7,5%
-Crater = ["Big Crater", "Big&Small Craters","Small Craters", "No Craters"]
-OddsCrater = [5,3,10,12] #Chance Big Crater: 16,67% (3,03%), Big&Small Crater: 10% (1,8%), Small Craters: 33,33% (6,06%), No Craters: 40%
+OddsRingsWithMoon = [8,6,8,6,8,6,4,4,4,2,2,2,10] 
+Crater = ["Large Impact Crater", "Large Impace Crater & Volcanic Caldera Craters","Volcanic Calddera Craters", "No Craters"]
+OddsCrater = [5,3,10,12] 
 Volcano = ["Volcano", "No Volcano"]
-OddsVolcano = [1,14] #Chance Volcano: 6,67%, No Volcano: 93,33%; Effectively: 1,21%
-Lava = ["Lava Ocean", "Lava River", "No Lava"]
-OddsLava = [2,3,38]
+OddsVolcano = [1,14] 
+Magma = ["Magma Ocean", "Magma River", "No Magma"]
+OddsMagma = [2,3,38]
 
 #Terrastrial
 SolidGasDecide = random.choices(SolidGas)
@@ -30,38 +30,48 @@ CheckWater = random.choices(Water, OddsWater, k=1)
 CheckMoons = random.choices(Moons, OddsMoons, k=1)
 CheckVolcano = random.choices(Volcano, OddsVolcano, k=1)
 CheckCrater = random.choices(Crater, OddsCrater, k=1)
-CheckLava = random.choices(Lava, OddsLava, k=1)
+CheckMagma = random.choices(Magma, OddsMagma, k=1)
 
-if SolidGasDecide == ["Solid"]:
+if SolidGasDecide == ["Terrestrial World"]:
     print (random.choices(SolidPlanets))
-    print (CheckWater)
-    if CheckWater == ["Ocean&Islands"]:
-        print (random.choices(Clouds, OddsClouds, k=1))
+    if CheckSolid == ["Blue Planet"]:
+        print (CheckClouds)
         print (CheckMoons)
-            
-    elif CheckWater == ["Frozen Oceans"]:
-        print (random.choices(Clouds, OddsClouds, k=1))
-        print (CheckMoons)
-       
-    elif CheckWater == ["River"]:
-        print (random.choices(Clouds, OddsClouds, k=1))
-        print (CheckMoons)
-        
-    elif CheckWater == ["Frozen Rivers"]:
-        print (random.choices(Clouds, OddsClouds, k=1))
-        print (CheckMoons)
-        
-    else:
-        print (random.choices(Clouds, OddsClouds, k=1))
         print (CheckCrater)
-        print (CheckMoons)
         if CheckCrater == ["No Craters"]:
-            print (CheckLava)
-            if CheckLava == ["No Lava"]:
+            print (CheckMagma)
+            if CheckMagma == ["No Magma"]:
                 print (CheckVolcano)
+    
+    else:
+        print (CheckWater)
+        if CheckWater == ["Oceans"]:
+            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckMoons)
+            
+        elif CheckWater == ["Frozen Oceans"]:
+            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckMoons)
+       
+        elif CheckWater == ["River"]:
+            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckMoons)
+        
+        elif CheckWater == ["Frozen Rivers"]:
+            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckMoons)
+        
+        else:
+            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckCrater)
+            print (CheckMoons)
+            if CheckCrater == ["No Craters"]:
+                print (CheckMagma)
+                if CheckMagma == ["No Magma"]:
+                    print (CheckVolcano)
 
 #Gas
-if SolidGasDecide == ["Gas"]:
+if SolidGasDecide == ["Gas Giant"]:
     print (random.choices(GasPlanets))
     print (random.choices(Clouds, OddsClouds, k=1))
     print (CheckMoons)
