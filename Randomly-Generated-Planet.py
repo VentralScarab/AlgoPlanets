@@ -6,6 +6,10 @@ GasPlanets = ["Purple Planet", "Brown Planet", "Blue/Turquoise Planet", "Red Pla
 IceGiant = ["Dark Blue Planet", "Light Blue Planet", "Icy White Planet"]
 Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] 
 OddsWater = [4,6,3,5,1,2,14] 
+WaterAndMethane = ["Methane Oceans", "Methane River", "Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"]
+OddsWaterAndMethane = [4,6,4,6,3,5,1,2,20]
+WaterBluePlanet = ["Dry Oceans", "Dry Rivers", "Waterless"]
+OddsWaterBluePlanet = [1,2,7]
 Clouds = ["Veil Water Clouds (White)", "Stratocumulus Water Clouds (White)","Cumulus Water Clouds (White)", "Cloudless"]
 OddsClouds = [2,3,1,6] 
 GasPlanetClouds = ["Cumulus Water Clouds (White)","Cumulus Silicate Clouds (Red)","Cumulus Ammonia Clouds (Orange)", "Hurricane Clouds (White)", "Hurricane Ammonia Clouds (Orange)", "Cloudless"]
@@ -24,17 +28,27 @@ Magma = ["Magma Ocean", "Magma River", "No Magma"]
 OddsMagma = [2,3,38]
 
 #Terrastrial
-SolidGasDecide = random.choices(SolidGas)
+SolidGasDecide = random.choices(SolidGas, OddsSolidGas, k=1)
 print(SolidGasDecide)
+CheckSolid = random.choices(SolidPlanets)
+CheckGas = random.choices(GasPlanets)
+CheckIceGiant = random.choices(IceGiant)
 CheckWater = random.choices(Water, OddsWater, k=1)
+CheckWaterAndMethane = random.choices(WaterAndMethane, OddsWaterAndMethane, k=1)
+CheckWaterBluePlanet = random.choices(WaterBluePlanet, OddsWaterBluePlanet, k=1)
+CheckClouds = random.choices(Clouds, OddsClouds, k=1)
+CheckGasClouds = random.choices(GasPlanetClouds, OddsGasPlanetClouds, k=1)
 CheckMoons = random.choices(Moons, OddsMoons, k=1)
+CheckRings = random.choices(Rings, OddsRings, k=1)
+CheckRingsWithMoon = random.choices(RingsWithMoon, OddsRingsWithMoon, k=1)
 CheckVolcano = random.choices(Volcano, OddsVolcano, k=1)
 CheckCrater = random.choices(Crater, OddsCrater, k=1)
 CheckMagma = random.choices(Magma, OddsMagma, k=1)
 
 if SolidGasDecide == ["Terrestrial World"]:
-    print (random.choices(SolidPlanets))
+    print (CheckSolid)
     if CheckSolid == ["Blue Planet"]:
+        print (CheckWaterBluePlanet)
         print (CheckClouds)
         print (CheckMoons)
         print (CheckCrater)
@@ -42,27 +56,164 @@ if SolidGasDecide == ["Terrestrial World"]:
             print (CheckMagma)
             if CheckMagma == ["No Magma"]:
                 print (CheckVolcano)
+                
+    elif CheckSolid == ["Iron Planet"]:
+        print (CheckWaterAndMethane)
+        if CheckWaterAndMethane == ["Methane Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Methane River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+    
+        elif CheckWaterAndMethane == ["River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        else:
+            print (CheckClouds)
+            print (CheckCrater)
+            print (CheckMoons)
+            if CheckCrater == ["No Craters"]:
+                print (CheckMagma)
+                if CheckMagma == ["No Magma"]:
+                    print (CheckVolcano)
+                    
+    elif CheckSolid == ["Yellow Planet"]:
+        print (CheckWaterAndMethane)
+        if CheckWaterAndMethane == ["Methane Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Methane River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+    
+        elif CheckWaterAndMethane == ["River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        else:
+            print (CheckClouds)
+            print (CheckCrater)
+            print (CheckMoons)
+            if CheckCrater == ["No Craters"]:
+                print (CheckMagma)
+                if CheckMagma == ["No Magma"]:
+                    print (CheckVolcano)
+                    
+    elif CheckSolid == ["Purple Planet"]:
+        print (CheckWaterAndMethane)
+        if CheckWaterAndMethane == ["Methane Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Methane River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+    
+        elif CheckWaterAndMethane == ["River"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Frozen Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWaterAndMethane == ["Dry Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        else:
+            print (CheckClouds)
+            print (CheckCrater)
+            print (CheckMoons)
+            if CheckCrater == ["No Craters"]:
+                print (CheckMagma)
+                if CheckMagma == ["No Magma"]:
+                    print (CheckVolcano)
     
     else:
         print (CheckWater)
         if CheckWater == ["Oceans"]:
-            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckClouds)
             print (CheckMoons)
             
         elif CheckWater == ["Frozen Oceans"]:
-            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckClouds)
             print (CheckMoons)
        
         elif CheckWater == ["River"]:
-            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckClouds)
             print (CheckMoons)
         
         elif CheckWater == ["Frozen Rivers"]:
-            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWater == ["Dry Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
+            
+        elif CheckWater == ["Dry Rivers"]:
+            print (CheckClouds)
             print (CheckMoons)
         
         else:
-            print (random.choices(Clouds, OddsClouds, k=1))
+            print (CheckClouds)
             print (CheckCrater)
             print (CheckMoons)
             if CheckCrater == ["No Craters"]:
@@ -72,22 +223,22 @@ if SolidGasDecide == ["Terrestrial World"]:
 
 #Gas
 if SolidGasDecide == ["Gas Giant"]:
-    print (random.choices(GasPlanets))
-    print (random.choices(Clouds, OddsClouds, k=1))
+    print (CheckGas)
+    print (CheckGasClouds)
     print (CheckMoons)
     if CheckMoons == ["No Moons"]:
-        print (random.choices(Rings, OddsRings, k=1))
+        print (CheckRings)
     else:
-        print (random.choices(RingsWithMoon, OddsRingsWithMoon, k=1))
+        print (CheckRingsWithMoon)
     
     
 #IceGiant
 if SolidGasDecide == ["Ice Giant"]:
-    print (random.choices(IceGiant))
-    print (random.choices(GasPlanetClouds, OddsGasPlanetClouds, k=1))
+    print (CheckIceGiant)
+    print (CheckGasClouds)
     print (CheckMoons)
     if CheckMoons == ["No Moons"]:
-        print (random.choices(Rings, OddsRings, k=1))
+        print (CheckRings)
     else:
-        print (random.choices(RingsWithMoon, OddsRingsWithMoon, k=1))
+        print (CheckRingsWithMoon)
 
