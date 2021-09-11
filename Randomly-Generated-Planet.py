@@ -1,3 +1,5 @@
+import sys
+sys.stdout = open("AlgoPlanet1.txt", "w")
 import random
 SolidGas = ["Terrestrial World","Gas Giant","Ice Giant"] 
 OddsSolidGas = [5,3,2] 
