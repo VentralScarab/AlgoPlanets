@@ -51,6 +51,9 @@ if SolidGasDecide == ["Terrestrial World"]:
     print (CheckSolid)
     if CheckSolid == ["Blue Planet"]:
         print (CheckWaterBluePlanet)
+        if CheckWaterBluePlanet == ["Dry Oceans"]:
+            print (CheckClouds)
+            print (CheckMoons)
         print (CheckClouds)
         print (CheckMoons)
         print (CheckCrater)
