@@ -54,13 +54,17 @@ if SolidGasDecide == ["Terrestrial World"]:
         if CheckWaterBluePlanet == ["Dry Oceans"]:
             print (CheckClouds)
             print (CheckMoons)
-        print (CheckClouds)
-        print (CheckMoons)
-        print (CheckCrater)
-        if CheckCrater == ["No Craters"]:
-            print (CheckMagma)
-            if CheckMagma == ["No Magma"]:
-                print (CheckVolcano)
+        elif CheckWaterBluePlanet == ["Dry Rivers"]:
+            print (CheckClouds)
+            print (CheckMoons)
+        else:
+            print (CheckClouds)
+            print (CheckMoons)
+            print (CheckCrater)
+            if CheckCrater == ["No Craters"]:
+                print (CheckMagma)
+                if CheckMagma == ["No Magma"]:
+                    print (CheckVolcano)
                 
     elif CheckSolid == ["Iron Planet"]:
         print (CheckWaterAndMethane)
