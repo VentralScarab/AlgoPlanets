@@ -27,7 +27,7 @@ while i < 10:
     Volcano = ["Volcano", "No Volcano"]
     OddsVolcano = [1,14] #Chance Volcano: 6,67%, No Volcano: 93,33%; Effectively: 1,21%
     Magma = ["Magma Ocean", "Magma River", "No Magma"]
-    OddsMagma = [2,3,38]
+    OddsMagma = [10,15,25]
     Planet = []
     text = '# \n'
 
