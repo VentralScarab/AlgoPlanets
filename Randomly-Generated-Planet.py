@@ -20,8 +20,8 @@ while i < 10:
     OddsMoons = [6,6,6,6,6,6,6,6,6,6,6,6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,3.6,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,48.8] #Chance One Moon: 3,5%, Two Moons: 1,75%, Two Different Moons: 1%, No Moons: 19%
     Rings = ["One Brown Ring", "One Brown Ring Vertical", "One Black/Grey Ring", "One Black/Grey Ring Vertical", "One Green Ring", "One Green Ring Vertical", "Two Brown Rings One Vertical", "Two Black/Grey Rings One Vertical", "Two Green Rings One Vertical", "Two Brown&Green Rings One Vertical", "Two Grey & Brown Rings One Vertical", "Two Grey&Green Rings One Vertical", "No Rings"]
     OddsRings = [18.85,18.85,18.85,18.85,18.85,18.85,10.4,10.4,10.4,5.85,5.85,5.85,98.15] #Chance One Ring: 6,25%, Two Rings: 4%, Two Different Rings: 1,75%, No Rings: 58,75%]
-    RingsWithNoMoon = ["One Brown Ring", "One Brown Ring Vertical","One Black/Grey Ring", "One Black/Grey Ring Vertical", "One Green Ring", "One Green Ring Vertical", "Two Brown Rings One Vertical", "Two Black/Grey Rings One Vertical", "Two Green Rings One Vertical", "Two Brown&Green Rings One Vertical", "Two Grey & Brown Rings One Vertical", "Two Grey&Green Rings One Vertical", "Two Brown Rings(45°)", "Two Black/Grey Rings (45°)", "Two Green Rings (45°)", "Two Brown&Green Rings (45°)", "Two Grey&Brown Rings (45°)", "Two Grey&Green Rings (45°)", "No Rings"]
-    OddsRingsWithNoMoon = [18.85,18.85,18.85,18.85,18.85,18.85,10.4,10.4,10.4,5.85,5.85,5.85,22.1,22.1,22.1,7.8,7.8,7.8,8.45] #Chance One Ring: 6.25%, Two Rings: 4%, Two Different Rings: 1,75%, Two Rings (45°): 1%, Two Different Rings (45°): 0,5%
+    RingsWithNoMoon = ["Two Brown Rings(45°)", "Two Black/Grey Rings (45°)", "Two Green Rings (45°)", "Two Brown&Green Rings (45°)", "Two Grey&Brown Rings (45°)", "Two Grey&Green Rings (45°)", "No Rings"]
+    OddsRingsWithNoMoon = [12,12,12,5,5,5,75] 
     Crater = ["Large Impact Crater", "Large Impact Crater & Volcanic Caldera Craters","Volcanic Caldera Craters", "No Craters"]
     OddsCrater = [5,3,10,12] #Chance Big Crater: 16,67% (3,03%), Big&Small Crater: 10% (1,8%), Small Craters: 33,33% (6,06%), No Craters: 40%
     Volcano = ["Volcano", "No Volcano"]
@@ -241,7 +241,11 @@ while i < 10:
         Planet.append(CheckGasClouds)
         Planet.append(CheckMoons)
         if CheckMoons == ["No Moons"]:
-            Planet.append(CheckRingsWithNoMoon)
+            CheckRings
+            if CheckRings == ["No Rings"]:
+                Planet.append(CheckRingsWithNoMoon)
+            else:
+                Planet.append(CheckRings)
         else:
             Planet.append(CheckRings)
         
@@ -252,7 +256,11 @@ while i < 10:
         Planet.append(CheckGasClouds)
         Planet.append(CheckMoons)
         if CheckMoons == ["No Moons"]:
-            Planet.append(CheckRingsWithNoMoon)
+            CheckRings
+            if CheckRings == ["No Rings"]:
+                Planet.append(CheckRingsWithNoMoon)
+            else:
+                Planet.append(CheckRings)
         else:
             Planet.append(CheckRings)
 
