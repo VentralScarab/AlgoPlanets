@@ -7,11 +7,11 @@ while i < 10:
     GasPlanets = ["Purple Gas Planet", "Brown Gas Planet", "Blue/Turquoise Gas Planet", "Red Gas Planet"] #Chance 1/4
     IceGiant = ["Dark Blue Planet", "Light Blue Planet", "Icy White Planet"] #Chance 1/3
     Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] #Liquid Methane Ocean (Orange/Yellow)
-    OddsWater = [4,6,3,5,1,2,14] #Chance Ocean: 11,43%, River: 17,14%, Frozen Ocean: 8,57%, Frozen River: 14,29%, Dry Oceans: 2,86%, Dry Rivers: 5,71%, No Water: 36,36%
+    OddsWater = [17,25,9,13,2,1,31] 
     WaterAndMethane = ["Methane Oceans", "Methane River", "Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"]
-    OddsWaterAndMethane = [4,6,4,6,3,5,1,2,4] #Chance
+    OddsWaterAndMethane = [5,7,17,25,9,13,2,3,19] 
     WaterBluePlanet = ["Dry Oceans", "Dry Rivers", "Waterless"]
-    OddsWaterBluePlanet = [1,2,32]
+    OddsWaterBluePlanet = [2,3,95]
     Clouds = ["Veil Water Clouds (White)", "Stratocumulus Water Clouds (White)","Cumulus Water Clouds (White)", "Cloudless"]
     OddsClouds = [2,1,3,6] #Chance Small Clouds: 30%, Big Clouds: 10%, No Clouds: 60%
     GasPlanetClouds = ["Cumulus Water Clouds (White)","Cumulus Silicate Clouds (Red)","Cumulus Ammonia Clouds (Orange)", "Hurricane Clouds (White)", "Hurricane Ammonia Clouds (Orange)", "Cloudless"]
