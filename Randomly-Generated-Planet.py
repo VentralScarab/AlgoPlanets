@@ -23,11 +23,11 @@ while i < 10:
     RingsWithNoMoon = ["Two Brown Rings(45°)", "Two Black/Grey Rings (45°)", "Two Green Rings (45°)", "Two Brown&Green Rings (45°)", "Two Grey&Brown Rings (45°)", "Two Grey&Green Rings (45°)", "No Rings"]
     OddsRingsWithNoMoon = [33,33,33,12,12,12,15] 
     Crater = ["Large Impact Crater", "Large Impact Crater & Volcanic Caldera Craters","Volcanic Caldera Craters", "No Craters"]
-    OddsCrater = [5,3,10,12] #Chance Big Crater: 16,67% (3,03%), Big&Small Crater: 10% (1,8%), Small Craters: 33,33% (6,06%), No Craters: 40%
+    OddsCrater = [31,9,52,8] 
     Volcano = ["Volcano", "No Volcano"]
-    OddsVolcano = [1,14] #Chance Volcano: 6,67%, No Volcano: 93,33%; Effectively: 1,21%
+    OddsVolcano = [13,5] 
     Magma = ["Magma Ocean", "Magma River", "No Magma"]
-    OddsMagma = [10,15,25]
+    OddsMagma = [50,75,25]
     Planet = []
     text = '# \n'
 
