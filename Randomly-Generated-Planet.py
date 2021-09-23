@@ -51,7 +51,7 @@ while i < 10:
 
     if SolidGasDecide == ["Terrestrial World"]:
         Planet.append(CheckSolid)
-        if CheckSolid == ["Blue Planet"]:
+        if CheckSolid == ["Blue Terrestrial Planet"]:
             Planet.append(CheckWaterBluePlanet)
             if CheckWaterBluePlanet == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
@@ -71,7 +71,7 @@ while i < 10:
                 Planet.append(CheckMoons)
                 
         
-        elif CheckSolid == ["Iron Planet"]:
+        elif CheckSolid == ["Iron Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
@@ -114,7 +114,7 @@ while i < 10:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
                         
-        elif CheckSolid == ["Yellow Planet"]:
+        elif CheckSolid == ["Yellow Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
@@ -157,7 +157,7 @@ while i < 10:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
                         
-        elif CheckSolid == ["Purple Planet"]:
+        elif CheckSolid == ["Purple Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
