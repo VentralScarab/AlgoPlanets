@@ -6,7 +6,7 @@ while i < 10:
     SolidPlanets = ["Blue Terrestrial Planet", "Green Terrestrial Planet", "Brown Terrestrial Planet", "Iron Terrestrial Planet", "Red Terrestrial Planet", "Yellow Terrestrial Planet", "Purple Terrestrial Planet"] #Chance 1/7
     GasPlanets = ["Purple Gas Planet", "Brown Gas Planet", "Blue/Turquoise Gas Planet", "Red Gas Planet"] #Chance 1/4
     IceGiant = ["Dark Blue Planet", "Light Blue Planet", "Icy White Planet"] #Chance 1/3
-    Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] #Liquid Methane Ocean (Orange/Yellow)
+    Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] 
     OddsWater = [17,25,9,13,2,1,31] 
     WaterAndMethane = ["Methane Oceans", "Methane River", "Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"]
     OddsWaterAndMethane = [5,7,17,25,9,13,2,3,19] 
