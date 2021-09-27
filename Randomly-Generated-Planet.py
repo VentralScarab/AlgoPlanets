@@ -1,6 +1,6 @@
 import random
 i = 0
-while i < 10:
+while i < 512:
     SolidGas = ["Terrestrial World","Gas Giant","Ice Giant", "Lava Planet", "Dwarf Planet", "Algo Planet", "Moon Impact"] 
     OddsSolidGas = [500,300,200,2,2,2,2] 
     SolidPlanets = ["Blue Terrestrial Planet", "Green Terrestrial Planet", "Brown Terrestrial Planet", "Iron Terrestrial Planet", "Red Terrestrial Planet", "Yellow Terrestrial Planet", "Purple Terrestrial Planet"] #Chance 1/7
