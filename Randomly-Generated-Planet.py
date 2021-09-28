@@ -7,7 +7,7 @@ while i < 512:
     GasPlanets = ["Purple Gas Planet", "Brown Gas Planet", "Blue/Turquoise Gas Planet", "Red Gas Planet"] #Chance 1/4
     IceGiant = ["Dark Blue Planet", "Light Blue Planet", "Icy White Planet"] #Chance 1/3
     Water = ["Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"] 
-    OddsWater = [17,25,9,13,2,1,31] 
+    OddsWater = [17,25,9,11.5,2.25,3,32.25] 
     WaterAndMethane = ["Methane Oceans", "Methane River", "Oceans", "River","Frozen Oceans", "Frozen Rivers", "Dry Oceans", "Dry Rivers", "Waterless"]
     OddsWaterAndMethane = [5,7,17,25,9,13,2,3,19] 
     WaterBluePlanet = ["Dry Oceans", "Dry Rivers", "Waterless"]
