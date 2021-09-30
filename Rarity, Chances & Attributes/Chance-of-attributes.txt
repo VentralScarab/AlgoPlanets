@@ -81,9 +81,4 @@ One Ring Vertical Brown (Gas)	0,89%
 One Ring Vertical Grey (Gas)	0,89%
 One Ring Vertical Green (Gas)	0,89%
 Two Rings Brown (Gas)
-
-Crater (Condition Terrastrial Planet + No Water: 18,18%) [Need to adjust code for condition of No craters if Ocean, Small Craters possible if Rivers but not Big Crater]
-
-Lava (Condition Terrastrial Planet + No Water + No Big Crater) [Need to adjust code]
-
-Volcano (Condition Terrastrial Plante + No Water + No Big Crater + No Lava) [Need to adjust code]								
+				
