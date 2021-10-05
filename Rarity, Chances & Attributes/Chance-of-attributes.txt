@@ -2,32 +2,33 @@ LIST WILL BE UPDATED SOON
 
 Chance of each Attribute 
 
-Terrastrial Planet: 		50%
-Gas Planet: 			30%
-Ice Giant (Gas):		20%
+Terrastrial Planet: 		49.75%
+Gas Planet: 			29.85%
+Ice Giant (Gas):		19.90%
 Special Planet:			>1%
 
-Terrestrial Kind (Condition Terrestrial Planet: 50%)
+Terrestrial Color (Condition Terrestrial Planet: 50%):
 
-Blue Planet (Terra.)		8,33% (Implement no water for this Planet)
-Green Planet (Terra.)		8,33%
-Brown Planet (Terra.)		8,33%
-Iron Planet (Terra.)		8,33%
-Red Planet (Terra.)		8,33%
-Yellow Planet (Terra.)		8,33%
+Blue Planet (Terre.)		7,14% 
+Green Planet (Terre.)		7,14%
+Brown Planet (Terre.)		7,14%
+Iron Planet (Terre.)		7,14%
+Red Planet (Terre.)		7,14%
+Yellow Planet (Terre.)		7,14%
+Purple Planet (Terre.)		7,14%
 
 Gas Condition (Condition Gas Planet: 30%)
 
-Purple Planet (Gas)		6%
-Brown Planet (Gas)		6%
-Blue/Torqouise (Gas)		6% (Maybe delete this one?)
-Red Planet (Gas)		6%
-Yellow Planet (Gas)		6%
+Purple Planet (Gas)		7.5%
+Brown Planet (Gas)		7.5%
+Blue/Torqouise (Gas)		7.5% 
+Yellow Planet (Gas)		7.5%
 
 Ice Giant (Condition Ice Giant Planet: 20%)
 
-Dark Blue Planet (Ice Giant)	10%
-Light Blue Planet (Ice Giant)	10%
+Dark Blue Planet (Ice Giant)	6.67%
+Light Blue Planet (Ice Giant)	6.67%
+Icy White Planet (Ice Giant)	6.67%
 
 Water (Condition Terrestrial Planet: 50%)
 
