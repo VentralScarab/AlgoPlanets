@@ -13,21 +13,21 @@ while i < 512:
     WaterBluePlanet = ["Dry Oceans", "Dry Rivers", "Waterless"]
     OddsWaterBluePlanet = [2.25,3,94.75]
     Clouds = ["Veil Water Clouds (White)", "Stratocumulus Water Clouds (White)","Cumulus Water Clouds (White)", "Cloudless"]
-    OddsClouds = [20,10,35,55] 
-    GasPlanetClouds = ["Cumulus Water Clouds (White)","Cumulus Silicate Clouds (Red)","Cumulus Ammonia Clouds (Orange)", "Storm Clouds (White)", "Storm Ammonia Clouds (Orange)", "Storm Silicate Clouds (Red)", "Cloudless"]
-    OddsGasPlanetClouds = [35,20,10, 5, 2.5, 3, 27.5] 
-    Moons = ["One Moon Brown", "One Moon Brown (Craters)", "One Moon Grey/Iron", "One Moon Grey/Iron (Craters)", "One Moon Red", "One Moon Red (Craters)","One Moon Green", "One Moon Green (Craters)", "One Moon Yellow", "One Moon Yellow (Craters)", "One Moon Blue", "One Moon Blue (Craters)", "Two Moons Yellow", "Two Moons Yellow (Craters)", "Two Moons Brown", "Two Moons Brown (Craters)", "Two Moons Blue", "Two Moons Blue (Craters)", "Two Moons Green", "Two Moons Green (Craters)", "Two Moons Red", "Two Moons Red (Craters)", "Two Moons Grey/Iron", "Two Moons Grey/Iron (Craters)", "Two Moons Yellow&Grey", "Two Moons Blue&Green","Two Moons Red&Grey", "Two Moons Brown&Green", "Two Moons Green&Red", "Two Moons Yellow&Blue", "Two Moons Yellow&Grey (Grey with Craters)", "Two Moons Blue&Green (Green with Craters)","Two Moons Red&Grey (Grey with Craters)", "Two Moons Brown&Green (Green with Craters)", "Two Moons Green&Red (Red with Craters)", "Two Moons Yellow&Blue (Blue with Craters)", "Two Moons Yellow&Grey (Yellow with Craters)", "Two Moons Blue&Green (Blue with Craters)","Two Moons Red&Grey (Red with Craters)", "Two Moons Brown&Green (Brown with Craters)", "Two Moons Green&Red (Green with Craters)", "Two Moons Yellow&Blue (Yellow with Craters)", "Two Moons Yellow&Grey (Craters)", "Two Moons Blue&Green(Craters)","Two Moons Red&Grey (Craters)", "Two Moons Brown&Green (Craters)", "Two Moons Green&Red (Craters)", "Two Moons Yellow&Blue (Craters)", "No Moons"]
-    OddsMoons = [4,4,4,4,4,4,4,4,4,4,4,4,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,2.6,1.8,1.8,1.8,1.8,1.8,1.8,1,1,1,1,1,1,1,1,1,1,1,1,0.5,0.5,0.5,0.5,0.5,0.5,95] 
+    OddsClouds = [20,8,28,44] 
+    GasPlanetClouds = ["Cumulus Water Clouds (White)","Cumulus Silicate Clouds (Red)","Cumulus Ammonia Clouds (Orange)", "Storm Clouds (White)", "Storm Silicate Clouds (Red)", "Storm Ammonia Clouds (Orange)", "Cloudless"]
+    OddsGasPlanetClouds = [28,15,15, 6, 4, 4, 28] 
+    Moons = ["One Moon Brown", "One Moon Brown (Craters)", "One Moon Grey/Iron", "One Moon Grey/Iron (Craters)","One Moon Green", "One Moon Green (Craters)", "Two Moons Brown", "Two Moons Brown (Craters)", "Two Moons Green", "Two Moons Green (Craters)", "Two Moons Grey/Iron", "Two Moons Grey/Iron (Craters)", "Two Moons Brown&Green", "Two Moons Brown&Green (Craters)", "Two Moons Brown&Grey","Two Moons Brown&Grey (Craters)", "Two Moons Green&Grey","Two Moons Green&Grey (Craters)", "Two Moons Brown&Green (Green with Craters)", "Two Moons Brown&Green (Brown with Craters)", "Two Moons Green&Grey (Grey with Craters)", "Two Moons Green&Grey (Green with Craters)", "Two Moons Brown&Grey (Brown with Craters)", "Two Moons Brown&Grey (Grey with Craters)", "No Moons"]
+    OddsMoons = [0.8,0.8,0.8,0.8,0.8,0.8,0.45,0.45,0.45,0.45,0.45,0.45,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,89.2] 
     Rings = ["One Brown Ring", "One Brown Ring Vertical", "One Black/Grey Ring", "One Black/Grey Ring Vertical", "One Green Ring", "One Green Ring Vertical", "Two Brown Rings One Vertical", "Two Black/Grey Rings One Vertical", "Two Green Rings One Vertical", "Two Brown&Green Rings One Vertical", "Two Grey & Brown Rings One Vertical", "Two Grey&Green Rings One Vertical", "No Rings"]
-    OddsRings = [20,20,20,20,20,20,18,18,18,14,14,14,44]
+    OddsRings = [6,6,6,6,6,6,3,3,3,1.5,1.5,1.5,50.5]
     RingsWithNoMoon = ["Two Brown Rings(45°)", "Two Black/Grey Rings (45°)", "Two Green Rings (45°)", "Two Brown&Green Rings (45°)", "Two Grey&Brown Rings (45°)", "Two Grey&Green Rings (45°)", "No Rings"]
-    OddsRingsWithNoMoon = [33,33,33,12,12,12,15] 
+    OddsRingsWithNoMoon = [1.5,1.5,1.5,0.75,0.75,0.75,93.25] 
     Crater = ["Large Impact Crater", "Large Impact Crater & Volcanic Caldera Craters","Volcanic Caldera Craters", "No Craters"]
-    OddsCrater = [31,9,52,8] 
+    OddsCrater = [15,8,25,52] 
     Volcano = ["Volcano", "No Volcano"]
-    OddsVolcano = [13,5] 
+    OddsVolcano = [17.8,82.2] 
     Magma = ["Magma Ocean", "Magma River", "No Magma"]
-    OddsMagma = [50,75,25]
+    OddsMagma = [13,20.5,66.5]
     Planet = []
     text = '# \n'
 
@@ -56,11 +56,11 @@ while i < 512:
             if CheckWaterBluePlanet == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterBluePlanet == ["Dry Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-            
+
             else:
                 Planet.append(CheckCrater)
                 if CheckCrater == ["No Craters"]:
@@ -69,42 +69,42 @@ while i < 512:
                         Planet.append(CheckVolcano)
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
-        
+
+
         elif CheckSolid == ["Iron Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Methane River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-        
+
             elif CheckWaterAndMethane == ["River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             else:
                 Planet.append(CheckCrater)
                 if CheckCrater == ["No Craters"]:
@@ -113,41 +113,41 @@ while i < 512:
                         Planet.append(CheckVolcano)
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                        
+
         elif CheckSolid == ["Yellow Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Methane River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-        
+
             elif CheckWaterAndMethane == ["River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             else:
                 Planet.append(CheckCrater)
                 if CheckCrater == ["No Craters"]:
@@ -156,41 +156,41 @@ while i < 512:
                         Planet.append(CheckVolcano)
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                        
+
         elif CheckSolid == ["Purple Terrestrial Planet"]:
             Planet.append(CheckWaterAndMethane)
             if CheckWaterAndMethane == ["Methane Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Methane River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-        
+
             elif CheckWaterAndMethane == ["River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Frozen Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWaterAndMethane == ["Dry Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             else:
                 Planet.append(CheckCrater)
                 if CheckCrater == ["No Craters"]:
@@ -199,33 +199,33 @@ while i < 512:
                         Planet.append(CheckVolcano)
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-            
+
         else:
             Planet.append(CheckWater)
             if CheckWater == ["Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWater == ["Frozen Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-           
+
             elif CheckWater == ["River"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-            
+
             elif CheckWater == ["Frozen Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWater == ["Dry Oceans"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-                
+
             elif CheckWater == ["Dry Rivers"]:
                 Planet.append(CheckClouds)
                 Planet.append(CheckMoons)
-            
+
             else:
                 Planet.append(CheckCrater)
                 if CheckCrater == ["No Craters"]:
@@ -248,8 +248,8 @@ while i < 512:
                 Planet.append(CheckRings)
         else:
             Planet.append(CheckRings)
-        
-        
+
+
     #IceGiant
     if SolidGasDecide == ["Ice Giant"]:
         Planet.append(CheckIceGiant)
