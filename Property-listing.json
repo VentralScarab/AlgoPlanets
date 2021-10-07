@@ -1,0 +1,35 @@
+// Thanks to algokittens, ChrisAntaki and TommyAlex79 for providing this ARC -> https://github.com/algokittens/arc69 //
+
+{   
+    "standard": "arc69",
+    "description": "AlgoPlanet000"
+    "attributes": [
+        {"trait_type":"Planet",
+        "value":"X"
+        },
+        {"trait_type":"Color",
+        "value":"X"
+        },
+        {"trait_type":"Oceans/Rivers",
+        "value":"X"
+        },
+        {"trait_type":"Clouds",
+        "value":"X"
+        },
+        {"trait_type":"Crater",
+        "value":"X"
+        },
+        {"trait_type":"Moons",
+        "value":"X"
+        },
+        {"trait_type":"Rings",
+        "value":"X"
+        },
+        {"trait_type":"Magma",
+        "value":"X"
+        },
+        {"trait_type":"Volcano",
+        "value":"X"
+        }
+    ]
+}
