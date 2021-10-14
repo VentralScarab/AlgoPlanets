@@ -20,7 +20,7 @@ with open("AlgoPlanet_Unicode.txt","r") as file:
         elif line[4] == "5" or line[4] == "6" or line[5] == "3" or line[8] == "2" or line[8] == "8" or line[8] == "9" or line[8] == "k" or line[9] == "1" or line[9] == "2" or line[9] == "3" or line[9] == "4" or line[9] == "5" or line[9] == "6":
             R +=1
 
-        elif line[4] == "3" or line[4] == "4" or line[4] == "9" or line[8] == "1" or line[8] == "3" or line[8] == "4" or line[8] == "5" or line[8] == "6" or line[8] == "7" or line[8] == "l" or line[9] == "z" or line[5] == "4" or line[6] == "3" or line[7] == "2" or line[10] == 'n' or line[10] == "u": 
+        else:
             C +=1
          
 print("Secret Rare =", Secret)  
