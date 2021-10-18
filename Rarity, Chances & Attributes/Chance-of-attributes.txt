@@ -5,7 +5,7 @@ Chance of each Attribute
 Terrastrial Planet: 		49.75%
 Gas Planet: 			29.85%
 Ice Giant (Gas):		19.90%
-Special Planet:			>1%
+Special Planet:			0.19%
 
 Terrestrial Color (Condition Terrestrial Planet: 50%):
 
