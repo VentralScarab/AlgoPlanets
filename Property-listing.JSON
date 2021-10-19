@@ -3,7 +3,7 @@
     "description": "AlgoPlanet000"
     "attributes": [
         {"trait_type":"Type",
-        "value":"Terrestrial Planet, Gas Planet, Ice Giant Planet, Lava Planet, Moon Impact Planet, Dwarf Planet"
+        "value":"Terrestrial Planet, Gas Planet, Ice Giant Planet, Lava Planet, Moon Impact Planet, Dwarf Planet, Black Hole"
         },
         {"trait_type":"Color",
         "value":"Black (Lava), Blue/White (Dwarf), Red/Brown (Moon Impact), Blue (Terrestrial), Green (Terrestrial), Brown (Terrestrial), Iron (Terrestrial), Red (Terrestrial), Yellow (Terrestrial), Pruple (Terrestrial), Sand (Gas), Turquoise (Gas), Red (Gas), Brown (Gas)"
