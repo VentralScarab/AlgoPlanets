@@ -95,7 +95,65 @@ with open("Unicode.txt", "r") as file:
       Crater = image.open("Volcanic Caldera.png")
       
     elif line[5] == "4":
-      Crater = image.open("Craterless.png")
+      Crater = image.open("No Crater.png")
+      
+    #Magma
+    if line[6] == "0":
+      Magma = image.open("No Magma.png")
+      
+    elif line[6] == "1":
+      Magma = image.open("Magma Oceans.png")
+        
+    elif line[6] == "2":
+      Magma = image.open("Magma Rivers.png")
+        
+    elif line[6] == "3":
+      Magma = image.open("No Magma.png")
+      
+    #Volcano
+    if line[7] == "0":
+      Volcano = image.open("No Volcano.png")
+      
+    elif line[7] == "1":
+      Volcano = image.open("Volcano.png")
+        
+    elif line[7] == "2":
+      Volcano = image.open("No Volcano.png")
+      
+    #Clouds
+    if line[8] == "1":
+      Clouds = image.open("Veil Clouds.png")
+        
+    elif line[8] == "2":
+      Clouds = image.open("Stratocumulus Clouds.png")
+        
+    elif line[8] == "3":
+      Clouds = image.open("Cumulus Clouds (White).png")
+       
+    elif line[8] == "4":
+      Clouds = image.open("No Clouds.png")
+      
+    elif line[8] == "5":
+      Clouds = image.open("Cumulus Clouds (White).png")
+        
+    elif line[8] == "6":
+      Liquid = image.open("Cumulus Clouds (Silicate).png")
+        
+    elif line[8] == "7":
+      Liquid = image.open("Cumulus CLouds (Ammonia).png")
+        
+    elif line[8] == "8":
+      Liquid = image.open("Cumulonimbus Clouds (White).png")
+        
+    elif line[8] == "9":
+      Liquid = image.open("Cumulonimbus Clouds (Silicate).png")
+      
+    elif line[8] == "k":
+      Liquid = image.open("Cumulonimbus Clouds (Ammonia).png")
+        
+    elif line[8] == "l":
+      Liquid = image.open("No Clouds.png")
+      
    
        
     
