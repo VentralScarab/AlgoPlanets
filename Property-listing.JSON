@@ -6,7 +6,7 @@
         "value":"Terrestrial Planet, Gas Planet, Ice Giant Planet, Lava Planet, Moon Impact Planet, Dwarf Planet"
         },
         {"trait_type":"Color",
-        "value":"Blue (Terrestrial), Green (Terrestrial), Brown (Terrestrial), Iron (Terrestrial), Red (Terrestrial), Yellow (Terrestrial), Pruple (Terrestrial), Sand (Gas), Turquoise (Gas), Red (Gas), Brown (Gas)"
+        "value":"Black (Lava), Blue/White (Dwarf), Red/Brown (Moon Impact), Blue (Terrestrial), Green (Terrestrial), Brown (Terrestrial), Iron (Terrestrial), Red (Terrestrial), Yellow (Terrestrial), Pruple (Terrestrial), Sand (Gas), Turquoise (Gas), Red (Gas), Brown (Gas)"
         },
         {"trait_type":"Liquid",
         "value":"Water Oceans, Water Rivers, Frozen Oceans, Frozen Rivers, Methane Oceans, Methane Rivers, Dry Oceans, Dry Rivers, Lava Rivers, No Liquid"
@@ -18,7 +18,7 @@
         "value":"Volcanic Caldera, Large Impact, Large Impact + Volcanic Caldera, No Craters"
         },
         {"trait_type":"Moons",
-        "value":"Impact Moon, One Blue Moon, One Green Moon, One Iron Moon, One Red Moon, One Brown Moon, Two Blue Moons, Two Green Moons, Two Iron Moons, Two Red Moons, Two Brown Moons, No Moons"
+        "value":"Dwarf Moon Red & Small Brown Moon, Dwarf Moon Purple, Impact Moon, One Blue Moon, One Green Moon, One Iron Moon, One Red Moon, One Brown Moon, Two Blue Moons, Two Green Moons, Two Iron Moons, Two Red Moons, Two Brown Moons, No Moons"
         },
         {"trait_type":"Rings",
         "value":"One Brown/Green Ring, One Brown/Green Ring (Vertical), One Iron Ring, One Iron Ring (Vertical), One Red Ring, One Red Ring (Vertical), Two Brown/Green Rings, Two Iron Rings, Two Red Rings, Two Brown/Green & Iron Rings, Two Brown/Green & Red Rings, Two Iron & Red Rings, Two Brown/Green Rings (45°), Two Iron Rings (45°), Two Red Rings (45°), Two Brown/Green & Iron Rings (45°), Two Brown/Green & Red Rings (45°), Two Iron & Red Rings (45°), No Rings"
