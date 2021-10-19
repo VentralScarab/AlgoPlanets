@@ -137,22 +137,39 @@ with open("Unicode.txt", "r") as file:
       Clouds = image.open("Cumulus Clouds (White).png")
         
     elif line[8] == "6":
-      Liquid = image.open("Cumulus Clouds (Silicate).png")
+      Clouds = image.open("Cumulus Clouds (Silicate).png")
         
     elif line[8] == "7":
-      Liquid = image.open("Cumulus CLouds (Ammonia).png")
+      Clouds = image.open("Cumulus CLouds (Ammonia).png")
         
     elif line[8] == "8":
-      Liquid = image.open("Cumulonimbus Clouds (White).png")
+      Clouds = image.open("Cumulonimbus Clouds (White).png")
         
     elif line[8] == "9":
-      Liquid = image.open("Cumulonimbus Clouds (Silicate).png")
+      Clouds = image.open("Cumulonimbus Clouds (Silicate).png")
       
     elif line[8] == "k":
-      Liquid = image.open("Cumulonimbus Clouds (Ammonia).png")
+      Clouds = image.open("Cumulonimbus Clouds (Ammonia).png")
         
     elif line[8] == "l":
-      Liquid = image.open("No Clouds.png")
+      Clouds = image.open("No Clouds.png")
+      
+    #Moons
+    
+    #Rings
+    
+    Layer1 = Base.paste(Liquid)
+    Layer2 = Layer1.paste(Crater)
+    Layer3 = Layer2.paste(Magma)
+    Layer4 = Layer3.paste(Volcano)
+    Layer5 = Layer4.paste(Clouds)
+    Layer6 = Layer5.paste(Moons)
+    Layer7 = Layer6.paste(Rings)
+    
+    x = 1 
+    
+    Layer7.save("AlgoPlanet" + x + ".png")
+    x+=1
       
    
        
