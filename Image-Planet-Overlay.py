@@ -155,8 +155,135 @@ with open("Unicode.txt", "r") as file:
       Clouds = image.open("No Clouds.png")
       
     #Moons
+    if line [9] == "0":
+      Moons = image.open("No Moons.png")
+    
+    elif line[9] == "1":
+      Moons = image.open("One Moon Brown.png")
+        
+    elif line[9] == "2":
+      Moons = image.open("One Moon Green.png")
+       
+    elif line[9] == "3":
+      Moons = image.open("One Moon Iron.png")
+      
+    elif line[9] == "4":
+      Moons = image.open("One Moon Blue.png")
+        
+    elif line[9] == "5":
+      Moons = image.open("One Moon Red.png")
+        
+    elif line[9] == "6":
+      Moons = image.open("Two Moons Brown.png")
+        
+    elif line[9] == "7":
+      Moons = image.open("Two Moons Green.png")
+        
+    elif line[9] == "8":
+      Moons = image.open("Two Moons Iron.png")
+      
+    elif line[9] == "9":
+      Moons = image.open("Two Moons Blue.png")
+        
+    elif line[9] == "k":
+      Moons = image.open("Two Moons Red.png")
+      
+    elif line[9] == "l":
+      Moons = image.open("Two Moons Brown and Green.png")
+      
+    elif line[9] == "m":
+      Moons = image.open("Two Moons Brown and Iron.png")
+      
+    elif line[9] == "n":
+      Moons = image.open("Two Moons Brown and Blue.png")
+      
+    elif line[9] == "o":
+      Moons = image.open("Two Moons Brown and Red.png")
+      
+    elif line[9] == "p":
+      Moons = image.open("Two Moons Green and Iron.png")
+      
+    elif line[9] == "q":
+      Moons = image.open("Two Moons Green and Blue.png")
+      
+    elif line[9] == "r":
+      Moons = image.open("Two Moons Green and Red.png")
+      
+    elif line[9] == "s":
+      Moons = image.open("Two Moons Iron and Blue.png")
+      
+    elif line[9] == "t":
+      Moons = image.open("Two Moons Iron and Red.png")
+      
+    elif line[9] == "u":
+      Moons = image.open("Two Moons Blue and Red.png")
+      
+    elif line[9] == "v":
+      Moons = image.open("No Moons.png")
     
     #Rings
+    if line[10] == "0"
+      Rings = image.open("No Rings.png")
+      
+    elif line[10] == "1":
+      Rings = image.open("One Ring Brown.png")
+        
+    elif line[10] == "2":
+      Rings = image.open("One Ring Brown (Vertical).png")
+       
+    elif line[10] == "3":
+      Rings = image.open("One Ring Iron.png")
+      
+    elif line[10] == "4":
+      Rings = image.open("One Ring Iron (Vertical).png")
+        
+    elif line[10] == "5":
+      Rings = image.open("One Ring Green.png")
+        
+    elif line[10] == "6":
+      Rings = image.open("One Ring Green (Vertical).png")
+        
+    elif line[10] == "7":
+      Rings = image.open("Two Brown Rings (One Vertical).png")
+        
+    elif line[10] == "8":
+      Rings = image.open("Two Iron Rings (One Vertical).png")
+      
+    elif line[10] == "9":
+      Rings = image.open("Two Green Rings (One Vertical).png")
+        
+    elif line[10] == "k":
+      Rings = image.open("Two Brown and Green Rings (One Vertical).png")
+      
+    elif line[10] == "l":
+      Rings = image.open("Two Grey and Brown Rings (One Vertical).png")
+      
+    elif line[10] == "m":
+      Rings = image.open("Two Green and Grey Rings (One Vertical).png")
+      
+    elif line[10] == "n":
+      Rings = image.open("No Rings.png")
+      
+    elif line[10] == "o":
+      Rings = image.open("Two Brown Rings (45°).png")
+      
+    elif line[10] == "p":
+      Rings = image.open("Two Iron Rings (45°).png")
+      
+    elif line[10] == "q":
+      Rings = image.open("Two Green Rings (45°).png")
+      
+    elif line[10] == "r":
+      Rings = image.open("Two Brown and Green Rings (45°).png")
+      
+    elif line[10] == "s":
+      Rings = image.open("Two Grey and Brown Rings (45°).png")
+      
+    elif line[10] == "t":
+      Rings = image.open("Two Green and Grey Rings (45°).png")
+      
+    elif line[10] == "u":
+      Rings = image.open("No Rings.png")
     
     Layer1 = Base.paste(Liquid)
     Layer2 = Layer1.paste(Crater)
