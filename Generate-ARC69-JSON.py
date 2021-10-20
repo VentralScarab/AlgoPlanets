@@ -1,8 +1,9 @@
-with open("Unicode.txt", "r") as file:
+with open('TestJSON.txt', 'r') as file:
     
+    count=1
+
     for line in file:
         
-        n=1
         
         Type = ""
         Color = ""
@@ -132,7 +133,7 @@ with open("Unicode.txt", "r") as file:
             Crater = "Cracks"
             
         if line[5] == "0":
-            Crater = "No Craters"
+            Crater = "No Crater"
       
         elif line[5] == "1":
             Crater = "Large Impact"
@@ -158,13 +159,13 @@ with open("Unicode.txt", "r") as file:
             
         #Clouds
         if line[0] == "5":
-            Clouds = "Dwarf Clouds"
+            Clouds = "Dwarf Clouds (Water)"
             
         if line[8] == "1":
-            Clouds = "Veil Clouds"
+            Clouds = "Veil Clouds (Water)"
 
         elif line[8] == "2":
-            Clouds = "Stratocumulus Clouds"
+            Clouds = "Stratocumulus Clouds (Water)"
 
         elif line[8] == "3":
             Clouds = "Cumulus Clouds (Water)"
@@ -264,101 +265,74 @@ with open("Unicode.txt", "r") as file:
             Moons = "No Moons"
             
         #Rings
-        if line[10] == "0"
-            Rings = image.open("No Rings.png")
+        if line[10] == "0":
+            Rings = "No Rings"
 
         elif line[10] == "1":
-            Rings = image.open("One Ring Brown.png")
+            Rings = "One Ring Brown"
 
         elif line[10] == "2":
-            Rings = image.open("One Ring Brown (Vertical).png")
+            Rings = "One Ring Brown (Vertical)"
 
         elif line[10] == "3":
-            Rings = image.open("One Ring Iron.png")
+            Rings = "One Ring Iron"
 
         elif line[10] == "4":
-            Rings = image.open("One Ring Iron (Vertical).png")
+            Rings = "One Ring Iron (Vertical)"
 
         elif line[10] == "5":
-            Rings = image.open("One Ring Green.png")
+            Rings = "One Ring Green"
 
         elif line[10] == "6":
-            Rings = image.open("One Ring Green (Vertical).png")
+            Rings = "One Ring Green (Vertical)"
 
         elif line[10] == "7":
-            Rings = image.open("Two Rings Brown (One Vertical).png")
+            Rings = "Two Rings Brown (One Vertical)"
 
         elif line[10] == "8":
-            Rings = image.open("Two Rings Iron (One Vertical).png")
+            Rings = "Two Rings Iron (One Vertical)"
 
         elif line[10] == "9":
-            Rings = image.open("Two Rings Green (One Vertical).png")
+            Rings = "Two Rings Green (One Vertical)"
 
         elif line[10] == "k":
-            Rings = image.open("Two Rings Brown and Green (One Vertical).png")
+            Rings = "Two Rings Brown and Green (One Vertical)"
 
         elif line[10] == "l":
-            Rings = image.open("Two Rings Grey and Brown (One Vertical).png")
+            Rings = "Two Rings Grey and Brown (One Vertical)"
 
         elif line[10] == "m":
-            Rings = image.open("Two Rings Green and Grey (One Vertical).png")
+            Rings = "Two Rings Green and Grey (One Vertical)"
 
         elif line[10] == "n":
-            Rings = image.open("No Rings.png")
+            Rings = "No Rings"
 
         elif line[10] == "o":
-            Rings = image.open("Two Rings Brown (45°).png")
+            Rings = ("Two Rings Brown (45°)")
 
         elif line[10] == "p":
-            Rings = image.open("Two Rings Iron (45°).png")
+            Rings = ("Two Rings Iron (45°)")
 
         elif line[10] == "q":
-            Rings = image.open("Two Rings Green (45°).png")
+            Rings = ("Two Rings Green (45°)")
 
         elif line[10] == "r":
-            Rings = image.open("Two Rings Brown and Green (45°).png")
+            Rings = ("Two Rings Brown and Green (45°)")
 
         elif line[10] == "s":
-            Rings = image.open("Two Rings Grey and Brown (45°).png")
+            Rings = ("Two Rings Grey and Brown (45°)")
 
         elif line[10] == "t":
-            Rings = image.open("Two Rings Green and Grey (45°).png")
+            Rings = ("Two Rings Green and Grey (45°)")
 
         elif line[10] == "u":
-            Rings = image.open("No Rings.png")
+            Rings = ("No Rings")
+        
+        indent = '    '
+
+        metadata = '{' + '\n' + indent + '"standard": "arc69",' + '\n' + indent + '"description": "AlgoPlanet ' + str(count) + '",' + '\n' + indent + '"attributes": [' + '\n' + indent + indent + '{"trait_type":"Type",' + '\n' + indent + indent + '"value":"' + Type +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Color",' + '\n' + indent + indent + '"value":"' + Color +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Liquid",' + '\n' + indent + indent + '"value":"' + Liquid +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Crater",' + '\n' + indent + indent + '"value":"' + Crater +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Volcano",' + '\n' + indent + indent + '"value":"' + Volcano +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Clouds",' + '\n' + indent + indent + '"value":"' + Clouds +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Moons",' + '\n' + indent + indent + '"value":"' + Moons +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Rings",' + '\n' + indent + indent + '"value":"' + Rings +'"' + '\n' + '},' + '\n'
             
-        metadata = {   
-                        '"standard"': '"arc69"',
-                        '"description"': '"AlgoPlanet ' + n'"'
-                        '"attributes"': [
-                            {'"trait_type"':'"Type"',
-                            '"value"':'"'Type'"'
-                            },
-                            {'"trait_type"':'"Color"',
-                            '"value"':'"'Color'"'
-                            },
-                            {'"trait_type"':'"Liquid"',
-                            '"value"':'"'Liquid'"'
-                            },
-                            {'"trait_type"':'"Crater"',
-                            '"value"':'"'Crater'"'
-                            },
-                            {'"trait_type"':'"Volcano"',
-                            '"value"':'"'Volcano'"'
-                            },
-                            {'"trait_type"':'"Clouds"',
-                            '"value"':'"'Clouds'"'
-                            },
-                            {'"trait_type"':'"Moons"',
-                            '"value"':'"'Moons'"'
-                            },
-                            {'"trait_type"':'"Rings"',
-                            '"value"':'"'Rings'"'
-                            }
-                        ]
-                    }
-            
-        with open("AlgoPlanetMetadata" + n + ".json", "r+") as f:
+        with open("AlgoPlanetMetadata" + str(count) + ".json", "w+") as f:
             f.write(metadata)
-            n+=1
-        f.close
+            count+=1
+    f.close
