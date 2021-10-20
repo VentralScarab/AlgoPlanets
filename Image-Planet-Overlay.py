@@ -285,17 +285,17 @@ with open("Unicode.txt", "r") as file:
     elif line[10] == "u":
       Rings = image.open("No Rings.png")
     
-    Layer1 = Base.paste(Liquid)
-    Layer2 = Layer1.paste(Crater)
-    Layer3 = Layer2.paste(Magma)
-    Layer4 = Layer3.paste(Volcano)
-    Layer5 = Layer4.paste(Clouds)
-    Layer6 = Layer5.paste(Moons)
-    Layer7 = Layer6.paste(Rings)
+    Base.paste(Liquid)
+    Base.paste(Crater)
+    Base.paste(Magma)
+    Base.paste(Volcano)
+    Base.paste(Clouds)
+    Base.paste(Moons)
+    Base.paste(Rings)
     
     x = 1 
     
-    Layer7.save("AlgoPlanet" + x + ".png")
+    Base.save("AlgoPlanet" + x + ".png")
     x+=1
       
    
