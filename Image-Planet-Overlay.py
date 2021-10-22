@@ -1,302 +1,488 @@
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFilter
 
-with open("Unicode.txt", "r") as file:
+with open("AlgoPlanet_Unicode.txt", "r") as file:
 
-  #BASE PLANET
+  count = 1
+
+  #base PLANET
   for line in file:
+
     #Terrestrial
     if line[1] == "1":
-      Base = image.open("Blue Terrestrial Planet.png")
+      base = Image.open("Blue Terrestrial Planet.png")
       
     elif line[1] == "2":
-      Base = image.open("Green Terrestrial Planet.png")
+      base = Image.open("Green Terrestrial Planet.png")
         
     elif line[1] == "3":
-      Base = image.open("Brown Terrestrial Planet.png")
+      base = Image.open("Brown Terrestrial Planet.png")
         
     elif line[1] == "4":
-      Base = image.open("Iron Terrestrial Planet.png")
+      base = Image.open("Iron Terrestrial Planet.png")
         
     elif line[1] == "5":
-      Base = image.open("Red Terrestrial Planet.png")
+      base = Image.open("Red Terrestrial Planet.png")
         
     elif line[1] == "6":
-      Base = image.open("Yellow Terrestrial Planet.png")
+      base = Image.open("Yellow Terrestrial Planet.png")
         
     elif line[1] == "7":
-      Base = image.open("Purple Terrestrial Planet.png")
+      base = Image.open("Purple Terrestrial Planet.png")
     
     #Gas
     if line[2] == "1":
-      Base = image.open("Sand Gas Planet.png")
+      base = Image.open("Purple Gas Planet.png")
       
     elif line[2] == "2":
-      Base = image.open("Turquoise Gas Planet.png")
+      base = Image.open("Turquoise Gas Planet.png")
         
     elif line[2] == "3":
-      Base = image.open("Brown Gas Planet.png")
+      base = Image.open("Brown Gas Planet.png")
         
     elif line[2] == "4":
-      Base = image.open("Red Gas Planet.png")
+      base = Image.open("Red Gas Planet.png")
         
     #IceGiant
     if line[3] == "1":
-      Base = image.open("Dark Blue Ice Giant Planet.png")
+      base = Image.open("Dark Blue Ice Giant Planet.png")
       
     elif line[3] == "2":
-      Base = image.open("Icy White Ice Giant Planet.png")
+      base = Image.open("Icy White Ice Giant Planet.png")
         
     elif line[3] == "3":
-      Base = image.open("Light Blue Ice Giant Planet.png")
+      base = Image.open("Light Blue Ice Giant Planet.png")
+
+    #SecretRare
+    if line[0] == "4":
+      base = Image.open("Lava Planet.png")
+
+    elif line[0] == "5":
+      base = Image.open("Dwarf Planet.png")
+
+    elif line[0] == "6":
+      base = Image.open("Moon Impact Planet.png")
         
         
-    #Liquid
+    #liquid
     if line[4] == "0":
-      Liquid = image.open("Waterless.png")
-      
-    elif line[4] == "1":
-      Liquid = image.open("Methane Oceans.png")
-        
+      liquid = Image.open("No Liquid.png").convert("RGBA")
+    
+    #Methane Oceans
+    if line[4] == "1" and line[1] == "1":
+      liquid = Image.open("Methane Oceans (Blue).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "2":
+      liquid = Image.open("Methane Oceans (Green).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "3":
+      liquid = Image.open("Methane Oceans (Brown).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "4":
+      liquid = Image.open("Methane Oceans (Iron).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "5":
+      liquid = Image.open("Methane Oceans (Red).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "6":
+      liquid = Image.open("Methane Oceans (Yellow).png").convert("RGBA")
+
+    elif line[4] == "1" and line[1] == "7":
+      liquid = Image.open("Methane Oceans (Purple).png").convert("RGBA")
+
+    #Methane Rivers
     elif line[4] == "2":
-      Liquid = image.open("Methane Rivers.png")
+      liquid = Image.open("Methane Rivers.png").convert("RGBA")
         
-    elif line[4] == "3":
-      Liquid = image.open("Water Oceans.png")
+    #Water Oceans
+    elif line[4] == "3" and line[1] == "1":
+      liquid = Image.open("Water Oceans (Blue).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "2":
+      liquid = Image.open("Water Oceans (Green).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "3":
+      liquid = Image.open("Water Oceans (Brown).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "4":
+      liquid = Image.open("Water Oceans (Iron).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "5":
+      liquid = Image.open("Water Oceans (Red).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "6":
+      liquid = Image.open("Water Oceans (Yellow).png").convert("RGBA")
+
+    elif line[4] == "3" and line[1] == "7":
+      liquid = Image.open("Water Oceans (Purple).png").convert("RGBA")
         
+    #Water Rivers
     elif line[4] == "4":
-      Liquid = image.open("Water Rivers.png")
+      liquid = Image.open("Water Rivers.png").convert("RGBA")
       
-    elif line[4] == "5":
-      Liquid = image.open("Frozen Oceans.png")
+    #Frozen Oceans
+    elif line[4] == "5" and line[1] == "1":
+      liquid = Image.open("Frozen Oceans (Blue).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "2":
+      liquid = Image.open("Frozen Oceans (Green).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "3":
+      liquid = Image.open("Frozen Oceans (Brown).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "4":
+      liquid = Image.open("Frozen Oceans (Iron).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "5":
+      liquid = Image.open("Frozen Oceans (Red).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "6":
+      liquid = Image.open("Frozen Oceans (Yellow).png").convert("RGBA")
+
+    elif line[4] == "5" and line[1] == "7":
+      liquid = Image.open("Frozen Oceans (Purple).png").convert("RGBA")
         
+    #Frozen Rivers
     elif line[4] == "6":
-      Liquid = image.open("Frozen Rivers.png")
+      liquid = Image.open("Frozen Rivers.png").convert("RGBA")
+
+    #Dry Oceans
+    elif line[4] == "7" and line[1] == "1":
+      liquid = Image.open("Dry Oceans (Blue).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "2":
+      liquid = Image.open("Dry Oceans (Green).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "3":
+      liquid = Image.open("Dry Oceans (Brown).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "4":
+      liquid = Image.open("Dry Oceans (Iron).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "5":
+      liquid = Image.open("Dry Oceans (Red).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "6":
+      liquid = Image.open("Dry Oceans (Yellow).png").convert("RGBA")
+
+    elif line[4] == "7" and line[1] == "7":
+      liquid = Image.open("Dry Oceans (Purple).png").convert("RGBA")
         
-    elif line[4] == "7":
-      Liquid = image.open("Dry Oceans.png")
-        
+    #Dry Rivers
     elif line[4] == "8":
-      Liquid = image.open("Dry Rivers.png")
+      liquid = Image.open("Dry Rivers.png").convert("RGBA")
         
     elif line[4] == "9":
-      Liquid = image.open("Waterless.png")
+      liquid = Image.open("No Liquid.png").convert("RGBA")
         
-    #Craters
+    #craters
     if line[5] == "0":
-      Crater = image.open("No Craters.png")
-      
-    elif line[5] == "1":
-      Crater = image.open("Large Impact.png")
+      crater = Image.open("No Crater.png").convert("RGBA")
+
+    #Large Impact      
+    if line[5] == "1" and line[1] == "1":
+      crater = Image.open("Large Impact (Blue).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "2":
+      crater = Image.open("Large Impact (Green).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "3":
+      crater = Image.open("Large Impact (Brown).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "4":
+      crater = Image.open("Large Impact (Iron).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "5":
+      crater = Image.open("Large Impact (Red).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "6":
+      crater = Image.open("Large Impact (Yellow).png").convert("RGBA")
+
+    elif line[5] == "1" and line[1] == "7":
+      crater = Image.open("Large Impact (Purple).png").convert("RGBA")
         
-    elif line[5] == "2":
-      Crater = image.open("Large Impact and Volcanic Caldera.png")
+    #Large Impact and Volcanic Caldera    
+    elif line[5] == "2" and line[1] == "1":
+      crater = Image.open("Large Impact and Volcanic Caldera (Blue).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "2":
+      crater = Image.open("Large Impact and Volcanic Caldera (Green).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "3":
+      crater = Image.open("Large Impact and Volcanic Caldera (Brown).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "4":
+      crater = Image.open("Large Impact and Volcanic Caldera (Iron).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "5":
+      crater = Image.open("Large Impact and Volcanic Caldera (Red).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "6":
+      crater = Image.open("Large Impact and Volcanic Caldera (Yellow).png").convert("RGBA")
+
+    elif line[5] == "2" and line[1] == "7":
+      crater = Image.open("Large Impact and Volcanic Caldera (Purple).png").convert("RGBA")
         
-    elif line[5] == "3":
-      Crater = image.open("Volcanic Caldera.png")
+    #Large Impact and Volcanic Caldera    
+    elif line[5] == "3" and line[1] == "1":
+      crater = Image.open("Volcanic Caldera (Blue).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "2":
+      crater = Image.open("Volcanic Caldera (Green).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "3":
+      crater = Image.open("Volcanic Caldera (Brown).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "4":
+      crater = Image.open("Volcanic Caldera (Iron).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "5":
+      crater = Image.open("Volcanic Caldera (Red).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "6":
+      crater = Image.open("Volcanic Caldera (Yellow).png").convert("RGBA")
+
+    elif line[5] == "3" and line[1] == "7":
+      crater = Image.open("Volcanic Caldera (Purple).png").convert("RGBA")
       
     elif line[5] == "4":
-      Crater = image.open("No Crater.png")
+      crater = Image.open("No Crater.png").convert("RGBA")
       
-    #Magma
+    #magma
     if line[6] == "0":
-      Magma = image.open("No Magma.png")
-      
-    elif line[6] == "1":
-      Magma = image.open("Magma Oceans.png")
+      magma = Image.open("No Magma.png").convert("RGBA")
+    
+    #magma Oceans
+    if line[6] == "1" and line[1] == "1":
+      magma = Image.open("Magma Oceans (Blue).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "2":
+      magma = Image.open("Magma Oceans (Green).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "3":
+      magma = Image.open("Magma Oceans (Brown).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "4":
+      magma = Image.open("Magma Oceans (Iron).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "5":
+      magma = Image.open("Magma Oceans (Red).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "6":
+      magma = Image.open("Magma Oceans (Yellow).png").convert("RGBA")
+
+    elif line[6] == "1" and line[1] == "7":
+      magma = Image.open("Magma Oceans (Purple).png").convert("RGBA")
         
+    #magma Rivers
     elif line[6] == "2":
-      Magma = image.open("Magma Rivers.png")
-        
+      magma = Image.open("Magma Rivers.png").convert("RGBA")
+
     elif line[6] == "3":
-      Magma = image.open("No Magma.png")
+      magma = Image.open("No Magma.png").convert("RGBA")
       
-    #Volcano
+    #volcano
     if line[7] == "0":
-      Volcano = image.open("No Volcano.png")
+      volcano = Image.open("No Volcano.png").convert("RGBA")
       
-    elif line[7] == "1":
-      Volcano = image.open("Volcano.png")
+    if line[7] == "1" and line[1] == "1":
+      volcano = Image.open("Volcano (Blue).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "2":
+      volcano = Image.open("Volcano (Green).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "3":
+      volcano = Image.open("Volcano (Brown).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "4":
+      volcano = Image.open("Volcano (Iron).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "5":
+      volcano = Image.open("Volcano (Red).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "6":
+      volcano = Image.open("Volcano (Yellow).png").convert("RGBA")
+
+    elif line[7] == "1" and line[1] == "7":
+      volcano = Image.open("Volcano (Purple).png").convert("RGBA")
         
     elif line[7] == "2":
-      Volcano = image.open("No Volcano.png")
+      volcano = Image.open("No Volcano.png").convert("RGBA")
       
-    #Clouds
+    #clouds
     if line[8] == "1":
-      Clouds = image.open("Veil Clouds.png")
+      clouds = Image.open("Veil Clouds (Water).png").convert("RGBA")
+
+    elif line[8] == "0":
+      clouds = Image.open("No Clouds.png").convert("RGBA")
         
     elif line[8] == "2":
-      Clouds = image.open("Stratocumulus Clouds.png")
+      clouds = Image.open("Stratocumulus Clouds (Water).png").convert("RGBA")
         
     elif line[8] == "3":
-      Clouds = image.open("Cumulus Clouds (White).png")
+      clouds = Image.open("Cumulus Clouds (Water).png").convert("RGBA")
        
     elif line[8] == "4":
-      Clouds = image.open("No Clouds.png")
+      clouds = Image.open("No Moons.png").convert("RGBA")
       
     elif line[8] == "5":
-      Clouds = image.open("Cumulus Clouds (White).png")
+      clouds = Image.open("Cumulus Clouds (Water).png").convert("RGBA")
         
     elif line[8] == "6":
-      Clouds = image.open("Cumulus Clouds (Silicate).png")
+      clouds = Image.open("Cumulus Clouds (Silicate).png").convert("RGBA")
         
     elif line[8] == "7":
-      Clouds = image.open("Cumulus CLouds (Ammonia).png")
+      clouds = Image.open("Cumulus CLouds (Ammonia).png").convert("RGBA")
         
     elif line[8] == "8":
-      Clouds = image.open("Cumulonimbus Clouds (White).png")
+      clouds = Image.open("Cumulonimbus Clouds (Water).png").convert("RGBA")
         
     elif line[8] == "9":
-      Clouds = image.open("Cumulonimbus Clouds (Silicate).png")
+      clouds = Image.open("Cumulonimbus Clouds (Silicate).png").convert("RGBA")
       
     elif line[8] == "k":
-      Clouds = image.open("Cumulonimbus Clouds (Ammonia).png")
+      clouds = Image.open("Cumulonimbus Clouds (Ammonia).png").convert("RGBA")
         
-    elif line[8] == "l":
-      Clouds = image.open("No Clouds.png")
       
-    #Moons
+    #moons
     if line [9] == "0":
-      Moons = image.open("No Moons.png")
+      moons = Image.open("No Moons.png").convert("RGBA")
     
-    elif line[9] == "1":
-      Moons = image.open("One Moon Brown.png")
+    if line[9] == "1":
+      moons = Image.open("One Moon Brown.png").convert("RGBA")
         
     elif line[9] == "2":
-      Moons = image.open("One Moon Green.png")
+      moons = Image.open("One Moon Green.png").convert("RGBA")
        
     elif line[9] == "3":
-      Moons = image.open("One Moon Iron.png")
+      moons = Image.open("One Moon Iron.png").convert("RGBA")
       
     elif line[9] == "4":
-      Moons = image.open("One Moon Blue.png")
+      moons = Image.open("One Moon Blue.png").convert("RGBA")
         
     elif line[9] == "5":
-      Moons = image.open("One Moon Red.png")
+      moons = Image.open("One Moon Red.png").convert("RGBA")
         
     elif line[9] == "6":
-      Moons = image.open("Two Moons Brown.png")
+      moons = Image.open("Two Moons Brown.png").convert("RGBA")
         
     elif line[9] == "7":
-      Moons = image.open("Two Moons Green.png")
+      moons = Image.open("Two Moons Green.png").convert("RGBA")
         
     elif line[9] == "8":
-      Moons = image.open("Two Moons Iron.png")
+      moons = Image.open("Two Moons Iron.png").convert("RGBA")
       
     elif line[9] == "9":
-      Moons = image.open("Two Moons Blue.png")
+      moons = Image.open("Two Moons Blue.png").convert("RGBA")
         
     elif line[9] == "k":
-      Moons = image.open("Two Moons Red.png")
+      moons = Image.open("Two Moons Red.png").convert("RGBA")
       
     elif line[9] == "l":
-      Moons = image.open("Two Moons Brown and Green.png")
+      moons = Image.open("Two Moons Green and Brown.png").convert("RGBA")
       
     elif line[9] == "m":
-      Moons = image.open("Two Moons Brown and Iron.png")
+      moons = Image.open("Two Moons Brown and Iron.png").convert("RGBA")
       
     elif line[9] == "n":
-      Moons = image.open("Two Moons Brown and Blue.png")
+      moons = Image.open("Two Moons Brown and Blue.png").convert("RGBA")
       
     elif line[9] == "o":
-      Moons = image.open("Two Moons Brown and Red.png")
+      moons = Image.open("Two Moons Brown and Red.png").convert("RGBA")
       
     elif line[9] == "p":
-      Moons = image.open("Two Moons Green and Iron.png")
+      moons = Image.open("Two Moons Green and Iron.png").convert("RGBA")
       
     elif line[9] == "q":
-      Moons = image.open("Two Moons Green and Blue.png")
+      moons = Image.open("Two Moons Green and Blue.png").convert("RGBA")
       
     elif line[9] == "r":
-      Moons = image.open("Two Moons Green and Red.png")
+      moons = Image.open("Two Moons Green and Red.png").convert("RGBA")
       
     elif line[9] == "s":
-      Moons = image.open("Two Moons Iron and Blue.png")
+      moons = Image.open("Two Moons Iron and Blue.png").convert("RGBA")
       
     elif line[9] == "t":
-      Moons = image.open("Two Moons Iron and Red.png")
+      moons = Image.open("Two Moons Iron and Red.png").convert("RGBA")
       
     elif line[9] == "u":
-      Moons = image.open("Two Moons Blue and Red.png")
+      moons = Image.open("Two Moons Blue and Red.png").convert("RGBA")
       
     elif line[9] == "v":
-      Moons = image.open("No Moons.png")
+      moons = Image.open("No Moons.png").convert("RGBA")
     
-    #Rings
-    if line[10] == "0"
-      Rings = image.open("No Rings.png")
+    #rings
+    if line[10] == "0":
+      rings = Image.open("No Rings.png").convert("RGBA")
       
-    elif line[10] == "1":
-      Rings = image.open("One Ring Brown.png")
+    if line[10] == "1":
+      rings = Image.open("One Ring Brown.png").convert("RGBA")
         
     elif line[10] == "2":
-      Rings = image.open("One Ring Brown (Vertical).png")
+      rings = Image.open("One Ring Brown (Vertical).png").convert("RGBA")
        
     elif line[10] == "3":
-      Rings = image.open("One Ring Iron.png")
+      rings = Image.open("One Ring Iron.png").convert("RGBA")
       
     elif line[10] == "4":
-      Rings = image.open("One Ring Iron (Vertical).png")
+      rings = Image.open("One Ring Iron (Vertical).png").convert("RGBA")
         
     elif line[10] == "5":
-      Rings = image.open("One Ring Green.png")
+      rings = Image.open("One Ring Green.png").convert("RGBA")
         
     elif line[10] == "6":
-      Rings = image.open("One Ring Green (Vertical).png")
+      rings = Image.open("One Ring Green (Vertical).png").convert("RGBA")
         
     elif line[10] == "7":
-      Rings = image.open("Two Brown Rings (One Vertical).png")
+      rings = Image.open("Two Rings Brown (One Vertical).png").convert("RGBA")
         
     elif line[10] == "8":
-      Rings = image.open("Two Iron Rings (One Vertical).png")
+      rings = Image.open("Two Rings Iron (One Vertical).png").convert("RGBA")
       
     elif line[10] == "9":
-      Rings = image.open("Two Green Rings (One Vertical).png")
+      rings = Image.open("Two Rings Green (One Vertical).png").convert("RGBA")
         
     elif line[10] == "k":
-      Rings = image.open("Two Brown and Green Rings (One Vertical).png")
+      rings = Image.open("Two Rings Brown and Green (One Vertical).png").convert("RGBA")
       
     elif line[10] == "l":
-      Rings = image.open("Two Grey and Brown Rings (One Vertical).png")
+      rings = Image.open("Two Rings Iron and Brown (One Vertical).png").convert("RGBA")
       
     elif line[10] == "m":
-      Rings = image.open("Two Green and Grey Rings (One Vertical).png")
+      rings = Image.open("Two Rings Green and Iron (One Vertical).png").convert("RGBA")
       
     elif line[10] == "n":
-      Rings = image.open("No Rings.png")
+      rings = Image.open("No Rings.png").convert("RGBA")
       
     elif line[10] == "o":
-      Rings = image.open("Two Brown Rings (45°).png")
+      rings = Image.open("Two Rings Brown (45°).png").convert("RGBA")
       
     elif line[10] == "p":
-      Rings = image.open("Two Iron Rings (45°).png")
+      rings = Image.open("Two Rings Iron (45°).png").convert("RGBA")
       
     elif line[10] == "q":
-      Rings = image.open("Two Green Rings (45°).png")
+      rings = Image.open("Two Rings Green (45°).png").convert("RGBA")
       
     elif line[10] == "r":
-      Rings = image.open("Two Brown and Green Rings (45°).png")
+      rings = Image.open("Two Rings Green and Brown (45°).png").convert("RGBA")
       
     elif line[10] == "s":
-      Rings = image.open("Two Grey and Brown Rings (45°).png")
+      rings = Image.open("Two Rings Brown and Iron (45°).png").convert("RGBA")
       
     elif line[10] == "t":
-      Rings = image.open("Two Green and Grey Rings (45°).png")
-      
-    elif line[10] == "u":
-      Rings = image.open("No Rings.png")
+      rings = Image.open("Two Rings Iron and Green (45°).png").convert("RGBA")
+
     
-    Base.paste(Liquid)
-    Base.paste(Crater)
-    Base.paste(Magma)
-    Base.paste(Volcano)
-    Base.paste(Clouds)
-    Base.paste(Moons)
-    Base.paste(Rings)
+    base.paste(liquid, (0,0), liquid)
+    base.paste(crater, (0,0), crater)
+    base.paste(magma, (0,0), magma)
+    base.paste(volcano, (0,0), volcano)
+    base.paste(clouds, (0,0), clouds)
+    base.paste(moons, (0,0), moons)
+    base.paste(rings, (0,0), rings)
     
-    x = 1 
     
-    Base.save("AlgoPlanet" + x + ".png")
-    x+=1
+    base.save("AlgoPlanet" + str(count) + ".png")
+    count+=1
       
    
        
