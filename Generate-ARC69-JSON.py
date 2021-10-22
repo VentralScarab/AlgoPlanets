@@ -1,4 +1,4 @@
-with open('TestJSON.txt', 'r') as file:
+with open('AlgoPlanet_Unicode.txt', 'r') as file:
     
     count=1
 
@@ -37,55 +37,55 @@ with open('TestJSON.txt', 'r') as file:
         
         #Color
         if line[0] == "4":
-            Color = "Black (Lava)"
+            Color = "Black"
         
         if line[0] == "5":
-            Color = "Turquoise/Grey (Dwarf)"
+            Color = "Blue/White"
             
         if line[0] == "6":
-            Color = "Brown/Red (Moon Impact)"
+            Color = "Brown/Red"
             
         if line[1] == "1":
-            Color = "Blue (Terrestrial)"
+            Color = "Blue"
       
         elif line[1] == "2":
-            Color = "Green (Terrestrial)"
+            Color = "Green"
         
         elif line[1] == "3":
-            Color = "Brown (Terrestrial)"
+            Color = "Brown"
         
         elif line[1] == "4":
-            Color = "Iron (Terrestrial)"
+            Color = "Iron"
         
         elif line[1] == "5":
-            Color = "Red (Terrestrial)"
+            Color = "Red"
         
         elif line[1] == "6":
-            Color = "Yellow (Terrestrial)"
+            Color = "Yellow"
         
         elif line[1] == "7":
-            Color = "Purple (Terrestrial)"
+            Color = "Purple"
             
         if line[2] == "1":
-            Color = "Turquoise/Grey (Gas)"
+            Color = "Purple/Sand"
       
         elif line[2] == "2":
-            Color = "Purple/Sand (Gas)"
+            Color = "Turquoise/Grey"
         
         elif line[2] == "3":
-            Color = "Brown (Gas)"
+            Color = "Brown/Green"
         
         elif line[2] == "4":
-            Color = "Red/Grey (Gas)"
+            Color = "Red/Sage"
             
         if line[3] == "1":
-            Color = "Dark Blue (Ice Giant)"
+            Color = "Dark Blue"
       
         elif line[3] == "2":
-            Color = "Icy White (Ice Giant)"
+            Color = "Icy White"
         
         elif line[3] == "3":
-            Color = "Light Blue (Ice Giant)"
+            Color = "Light Blue"
             
         
         #Liquid
@@ -157,10 +157,7 @@ with open('TestJSON.txt', 'r') as file:
         elif line[7] == "2":
             Volcano = "No Volcano"
             
-        #Clouds
-        if line[0] == "5":
-            Clouds = "Dwarf Clouds (Water)"
-            
+        #Clouds   
         if line[8] == "1":
             Clouds = "Veil Clouds (Water)"
 
@@ -177,89 +174,92 @@ with open('TestJSON.txt', 'r') as file:
             Clouds = "Cumulus Clouds (Water)"
 
         elif line[8] == "6":
-            Clouds = "Cumulus Clouds (Silicate)"
+            Clouds = "Cumulus Clouds (Ammonia)"
 
         elif line[8] == "7":
-            Clouds = "Cumulus Clouds (Ammonia)"
+            Clouds = "Cumulus Clouds (Silicate)"
 
         elif line[8] == "8":
             Clouds = "Cumulonimbus Clouds (Water)"
 
         elif line[8] == "9":
-            Clouds = "Cumulonimbus Clouds (Silicate)"
-
-        elif line[8] == "k":
             Clouds = "Cumulonimbus Clouds (Ammonia)"
 
+        elif line[8] == "k":
+            Clouds = "Cumulonimbus Clouds (Silicate)"
+
         elif line[8] == "l":
+            Clouds = "No Clouds"
+
+        elif line[8] == "0":
             Clouds = "No Clouds"
         
         #Moons
         if line [0] == "5":
-            Moons = "Two Moons Purple and Red"
+            Moons = "Three Purple, Red and Brown Moons"
             
         if line [9] == "0":
             Moons = "No Moons"
 
         elif line[9] == "1":
-            Moons = "One Moon Brown"
+            Moons = "One Brown Moon"
 
         elif line[9] == "2":
-            Moons = "One Moon Green"
+            Moons = "One Green Moon"
 
         elif line[9] == "3":
-            Moons = "One Moon Iron"
+            Moons = "One Iron Moon"
 
         elif line[9] == "4":
-            Moons = "One Moon Blue"
+            Moons = "One Blue Moon"
 
         elif line[9] == "5":
-            Moons = "One Moon Red"
+            Moons = "One Red Moon"
 
         elif line[9] == "6":
-            Moons = "Two Moons Brown"
+            Moons = "Two Brown Moons"
 
         elif line[9] == "7":
-            Moons = "Two Moons Green"
+            Moons = "Two Green Moons"
 
         elif line[9] == "8":
-            Moons = "Two Moons Iron"
+            Moons = "Two Iron Moons"
 
         elif line[9] == "9":
-            Moons = "Two Moons Blue"
+            Moons = "Two Blue Moons"
 
         elif line[9] == "k":
-            Moons = "Two Moons Red"
+            Moons = "Two Red Moons"
 
         elif line[9] == "l":
-            Moons = "Two Moons Brown and Green"
+            Moons = "Two Brown and Green Moons"
 
         elif line[9] == "m":
-            Moons = "Two Moons Brown and Iron"
+            Moons = "Two Brown and Iron Moons"
 
         elif line[9] == "n":
-            Moons = "Two Moons Brown and Blue"
+            Moons = "Two Brown and Blue Moons"
 
         elif line[9] == "o":
-            Moons = "Two Moons Brown and Red"
+            Moons = "Two Brown and Red Moons"
 
         elif line[9] == "p":
-            Moons = "Two Moons Green and Iron"
+            Moons = "Two Green and Iron Moons"
 
         elif line[9] == "q":
-            Moons = "Two Moons Green and Blue"
+            Moons = "Two Green and Blue Moons"
 
         elif line[9] == "r":
-            Moons = "Two Moons Green and Red"
+            Moons = "Two Green and Red Moons"
 
         elif line[9] == "s":
-            Moons = "Two Moons Iron and Blue"
+            Moons = "Two Iron and Blue Moons"
 
         elif line[9] == "t":
-            Moons = "Two Moons Iron and Red"
+            Moons = "Two Iron and Red Moons"
 
         elif line[9] == "u":
-            Moons = "Two Moons Blue and Red"
+            Moons = "Two Blue and Red Moons"
 
         elif line[9] == "v":
             Moons = "No Moons"
@@ -269,70 +269,70 @@ with open('TestJSON.txt', 'r') as file:
             Rings = "No Rings"
 
         elif line[10] == "1":
-            Rings = "One Ring Brown"
+            Rings = "One Brown Ring"
 
         elif line[10] == "2":
-            Rings = "One Ring Brown (Vertical)"
+            Rings = "One Brown Ring (Vertical)"
 
         elif line[10] == "3":
-            Rings = "One Ring Iron"
+            Rings = "One Iron Ring"
 
         elif line[10] == "4":
-            Rings = "One Ring Iron (Vertical)"
+            Rings = "One Iron Ring (Vertical)"
 
         elif line[10] == "5":
-            Rings = "One Ring Green"
+            Rings = "One Green Ring"
 
         elif line[10] == "6":
-            Rings = "One Ring Green (Vertical)"
+            Rings = "One Green Ring (Vertical)"
 
         elif line[10] == "7":
-            Rings = "Two Rings Brown (One Vertical)"
+            Rings = "Two Brown Rings (One Vertical)"
 
         elif line[10] == "8":
-            Rings = "Two Rings Iron (One Vertical)"
+            Rings = "Two Iron Rings (One Vertical)"
 
         elif line[10] == "9":
-            Rings = "Two Rings Green (One Vertical)"
+            Rings = "Two Green Rings (One Vertical)"
 
         elif line[10] == "k":
-            Rings = "Two Rings Brown and Green (One Vertical)"
+            Rings = "Two Brown and Green Rings (One Vertical)"
 
         elif line[10] == "l":
-            Rings = "Two Rings Grey and Brown (One Vertical)"
+            Rings = "Two Iron and Brown Rings (One Vertical)"
 
         elif line[10] == "m":
-            Rings = "Two Rings Green and Grey (One Vertical)"
+            Rings = "Two Green and Iron Rings (One Vertical)"
 
         elif line[10] == "n":
             Rings = "No Rings"
 
         elif line[10] == "o":
-            Rings = ("Two Rings Brown (45°)")
+            Rings = ("Two Brown Rings (45°)")
 
         elif line[10] == "p":
-            Rings = ("Two Rings Iron (45°)")
+            Rings = ("Two Iron Rings (45°)")
 
         elif line[10] == "q":
-            Rings = ("Two Rings Green (45°)")
+            Rings = ("Two Green Rings (45°)")
 
         elif line[10] == "r":
-            Rings = ("Two Rings Brown and Green (45°)")
+            Rings = ("Two Brown and Green Rings (45°)")
 
         elif line[10] == "s":
-            Rings = ("Two Rings Grey and Brown (45°)")
+            Rings = ("Two Grey and Brown Rings (45°)")
 
         elif line[10] == "t":
-            Rings = ("Two Rings Green and Grey (45°)")
+            Rings = ("Two Green and Grey Rings (45°)")
 
         elif line[10] == "u":
             Rings = ("No Rings")
         
         indent = '    '
 
-        metadata = '{' + '\n' + indent + '"standard": "arc69",' + '\n' + indent + '"description": "AlgoPlanet ' + str(count) + '",' + '\n' + indent + '"attributes": [' + '\n' + indent + indent + '{"trait_type":"Type",' + '\n' + indent + indent + '"value":"' + Type +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Color",' + '\n' + indent + indent + '"value":"' + Color +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Liquid",' + '\n' + indent + indent + '"value":"' + Liquid +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Crater",' + '\n' + indent + indent + '"value":"' + Crater +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Volcano",' + '\n' + indent + indent + '"value":"' + Volcano +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Clouds",' + '\n' + indent + indent + '"value":"' + Clouds +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Moons",' + '\n' + indent + indent + '"value":"' + Moons +'"' + '\n' + '},' + '\n' + indent + indent + '{"trait_type":"Rings",' + '\n' + indent + indent + '"value":"' + Rings +'"' + '\n' + '},' + '\n'
+        metadata2 = '{' + '\n' + indent + '"standard": "arc69",' + '\n' + indent + '"description": "AlgoPlanet ' + str(count) + '",' + '\n' + indent + '"attributes": [' + '\n' + indent + indent + '{"trait_type":"Type",' + '\n' + indent + indent + '"value":"' + Type +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Color",' + '\n' + indent + indent + '"value":"' + Color +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Liquid",' + '\n' + indent + indent + '"value":"' + Liquid +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Crater",' + '\n' + indent + indent + '"value":"' + Crater +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Volcano",' + '\n' + indent + indent + '"value":"' + Volcano +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Clouds",' + '\n' + indent + indent + '"value":"' + Clouds +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Moons",' + '\n' + indent + indent + '"value":"' + Moons +'"' + '\n' + indent + indent + '},' + '\n' + indent + indent + '{"trait_type":"Rings",' + '\n' + indent + indent + '"value":"' + Rings +'"' + '\n' + indent + indent + '},' + '\n' + indent + ']' + '\n' + '}'
             
         with open("AlgoPlanetMetadata" + str(count) + ".json", "w+") as f:
-            f.write(metadata)
+            f.write(metadata2)
             count+=1
     f.close
